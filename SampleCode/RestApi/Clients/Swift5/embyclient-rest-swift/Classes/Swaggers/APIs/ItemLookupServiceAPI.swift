@@ -35,11 +35,13 @@ open class ItemLookupServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example=[ {
   "IsSupportedAsIdentifier" : true,
+  "Website" : "Website",
   "Key" : "Key",
   "Name" : "Name",
   "UrlFormatString" : "UrlFormatString"
 }, {
   "IsSupportedAsIdentifier" : true,
+  "Website" : "Website",
   "Key" : "Key",
   "Name" : "Name",
   "UrlFormatString" : "UrlFormatString"
@@ -111,6 +113,51 @@ open class ItemLookupServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Resets metadata for one or more items
+
+     - parameter itemIds: (query) The item ids 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postItemsMetadataReset(itemIds: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postItemsMetadataResetWithRequestBuilder(itemIds: itemIds).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Resets metadata for one or more items
+     - POST /Items/Metadata/Reset
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter itemIds: (query) The item ids 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postItemsMetadataResetWithRequestBuilder(itemIds: String) -> RequestBuilder<Void> {
+        let path = "/Items/Metadata/Reset"
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "ItemIds": itemIds
+        ])
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Applies search criteria to an item and refreshes metadata
 
      - parameter body: (body) RemoteSearchResult:  
@@ -167,7 +214,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchBook(body: ProvidersRemoteSearchQueryProvidersBookInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchBook(body: RemoteSearchQueryBookInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchBookWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -187,6 +234,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -194,6 +242,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -203,6 +252,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -210,6 +260,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -220,7 +271,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchBookWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersBookInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchBookWithRequestBuilder(body: RemoteSearchQueryBookInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/Book"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -236,7 +287,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchBoxset(body: ProvidersRemoteSearchQueryProvidersItemLookupInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchBoxset(body: RemoteSearchQueryItemLookupInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchBoxsetWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -256,6 +307,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -263,6 +315,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -272,6 +325,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -279,6 +333,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -289,7 +344,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchBoxsetWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersItemLookupInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchBoxsetWithRequestBuilder(body: RemoteSearchQueryItemLookupInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/BoxSet"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -305,7 +360,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchGame(body: ProvidersRemoteSearchQueryProvidersGameInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchGame(body: RemoteSearchQueryGameInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchGameWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -325,6 +380,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -332,6 +388,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -341,6 +398,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -348,6 +406,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -358,7 +417,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchGameWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersGameInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchGameWithRequestBuilder(body: RemoteSearchQueryGameInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/Game"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -374,7 +433,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchMovie(body: ProvidersRemoteSearchQueryProvidersMovieInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchMovie(body: RemoteSearchQueryMovieInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchMovieWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -394,6 +453,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -401,6 +461,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -410,6 +471,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -417,6 +479,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -427,7 +490,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchMovieWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersMovieInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchMovieWithRequestBuilder(body: RemoteSearchQueryMovieInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/Movie"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -443,7 +506,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchMusicalbum(body: ProvidersRemoteSearchQueryProvidersAlbumInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchMusicalbum(body: RemoteSearchQueryAlbumInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchMusicalbumWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -463,6 +526,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -470,6 +534,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -479,6 +544,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -486,6 +552,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -496,7 +563,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchMusicalbumWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersAlbumInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchMusicalbumWithRequestBuilder(body: RemoteSearchQueryAlbumInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/MusicAlbum"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -512,7 +579,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchMusicartist(body: ProvidersRemoteSearchQueryProvidersArtistInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchMusicartist(body: RemoteSearchQueryArtistInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchMusicartistWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -532,6 +599,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -539,6 +607,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -548,6 +617,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -555,6 +625,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -565,7 +636,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchMusicartistWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersArtistInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchMusicartistWithRequestBuilder(body: RemoteSearchQueryArtistInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/MusicArtist"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -581,7 +652,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchMusicvideo(body: ProvidersRemoteSearchQueryProvidersMusicVideoInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchMusicvideo(body: RemoteSearchQueryMusicVideoInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchMusicvideoWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -601,6 +672,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -608,6 +680,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -617,6 +690,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -624,6 +698,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -634,7 +709,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchMusicvideoWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersMusicVideoInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchMusicvideoWithRequestBuilder(body: RemoteSearchQueryMusicVideoInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/MusicVideo"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -650,7 +725,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchPerson(body: ProvidersRemoteSearchQueryProvidersPersonLookupInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchPerson(body: RemoteSearchQueryPersonLookupInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchPersonWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -670,6 +745,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -677,6 +753,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -686,6 +763,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -693,6 +771,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -703,7 +782,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchPersonWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersPersonLookupInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchPersonWithRequestBuilder(body: RemoteSearchQueryPersonLookupInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/Person"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -719,7 +798,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchSeries(body: ProvidersRemoteSearchQueryProvidersSeriesInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchSeries(body: RemoteSearchQuerySeriesInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchSeriesWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -739,6 +818,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -746,6 +826,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -755,6 +836,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -762,6 +844,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -772,7 +855,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchSeriesWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersSeriesInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchSeriesWithRequestBuilder(body: RemoteSearchQuerySeriesInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/Series"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -788,7 +871,7 @@ open class ItemLookupServiceAPI {
      - parameter body: (body) RemoteSearchQuery&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsRemotesearchTrailer(body: ProvidersRemoteSearchQueryProvidersTrailerInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
+    open class func postItemsRemotesearchTrailer(body: RemoteSearchQueryTrailerInfo, completion: @escaping ((_ data: [RemoteSearchResult]?,_ error: Error?) -> Void)) {
         postItemsRemotesearchTrailerWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -808,6 +891,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -815,6 +899,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -824,6 +909,7 @@ open class ItemLookupServiceAPI {
   "IndexNumberEnd" : 1,
   "GameSystem" : "GameSystem",
   "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
+  "SortParentIndexNumber" : 2,
   "ImageUrl" : "ImageUrl",
   "Overview" : "Overview",
   "ParentIndexNumber" : 5,
@@ -831,6 +917,7 @@ open class ItemLookupServiceAPI {
   "Name" : "Name",
   "ProductionYear" : 0,
   "IndexNumber" : 6,
+  "SortIndexNumber" : 5,
   "SearchProviderName" : "SearchProviderName",
   "ProviderIds" : {
     "key" : "ProviderIds"
@@ -841,7 +928,7 @@ open class ItemLookupServiceAPI {
 
      - returns: RequestBuilder<[RemoteSearchResult]> 
      */
-    open class func postItemsRemotesearchTrailerWithRequestBuilder(body: ProvidersRemoteSearchQueryProvidersTrailerInfo) -> RequestBuilder<[RemoteSearchResult]> {
+    open class func postItemsRemotesearchTrailerWithRequestBuilder(body: RemoteSearchQueryTrailerInfo) -> RequestBuilder<[RemoteSearchResult]> {
         let path = "/Items/RemoteSearch/Trailer"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

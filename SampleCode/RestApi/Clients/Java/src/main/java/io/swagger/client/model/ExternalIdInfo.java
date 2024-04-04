@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -26,6 +26,9 @@ public class ExternalIdInfo {
   @SerializedName("Key")
   private String key = null;
 
+  @SerializedName("Website")
+  private String website = null;
+
   @SerializedName("UrlFormatString")
   private String urlFormatString = null;
 
@@ -38,10 +41,10 @@ public class ExternalIdInfo {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -56,10 +59,10 @@ public class ExternalIdInfo {
   }
 
    /**
-   * Get key
+   * The key.
    * @return key
   **/
-  @Schema(description = "")
+  @Schema(description = "The key.")
   public String getKey() {
     return key;
   }
@@ -68,16 +71,34 @@ public class ExternalIdInfo {
     this.key = key;
   }
 
+  public ExternalIdInfo website(String website) {
+    this.website = website;
+    return this;
+  }
+
+   /**
+   * Get website
+   * @return website
+  **/
+  @Schema(description = "")
+  public String getWebsite() {
+    return website;
+  }
+
+  public void setWebsite(String website) {
+    this.website = website;
+  }
+
   public ExternalIdInfo urlFormatString(String urlFormatString) {
     this.urlFormatString = urlFormatString;
     return this;
   }
 
    /**
-   * Get urlFormatString
+   * The URL format string.
    * @return urlFormatString
   **/
-  @Schema(description = "")
+  @Schema(description = "The URL format string.")
   public String getUrlFormatString() {
     return urlFormatString;
   }
@@ -116,13 +137,14 @@ public class ExternalIdInfo {
     ExternalIdInfo externalIdInfo = (ExternalIdInfo) o;
     return Objects.equals(this.name, externalIdInfo.name) &&
         Objects.equals(this.key, externalIdInfo.key) &&
+        Objects.equals(this.website, externalIdInfo.website) &&
         Objects.equals(this.urlFormatString, externalIdInfo.urlFormatString) &&
         Objects.equals(this.isSupportedAsIdentifier, externalIdInfo.isSupportedAsIdentifier);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, key, urlFormatString, isSupportedAsIdentifier);
+    return Objects.hash(name, key, website, urlFormatString, isSupportedAsIdentifier);
   }
 
 
@@ -133,6 +155,7 @@ public class ExternalIdInfo {
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    key: ").append(toIndentedString(key)).append("\n");
+    sb.append("    website: ").append(toIndentedString(website)).append("\n");
     sb.append("    urlFormatString: ").append(toIndentedString(urlFormatString)).append("\n");
     sb.append("    isSupportedAsIdentifier: ").append(toIndentedString(isSupportedAsIdentifier)).append("\n");
     sb.append("}");

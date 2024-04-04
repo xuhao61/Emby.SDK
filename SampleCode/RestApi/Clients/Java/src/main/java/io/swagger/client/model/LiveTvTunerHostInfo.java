@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -41,8 +41,20 @@ public class LiveTvTunerHostInfo {
   @SerializedName("ImportFavoritesOnly")
   private Boolean importFavoritesOnly = null;
 
+  @SerializedName("PreferEpgChannelImages")
+  private Boolean preferEpgChannelImages = null;
+
+  @SerializedName("PreferEpgChannelNumbers")
+  private Boolean preferEpgChannelNumbers = null;
+
   @SerializedName("AllowHWTranscoding")
   private Boolean allowHWTranscoding = null;
+
+  @SerializedName("AllowMappingByNumber")
+  private Boolean allowMappingByNumber = null;
+
+  @SerializedName("ImportGuideData")
+  private Boolean importGuideData = null;
 
   @SerializedName("Source")
   private String source = null;
@@ -188,6 +200,42 @@ public class LiveTvTunerHostInfo {
     this.importFavoritesOnly = importFavoritesOnly;
   }
 
+  public LiveTvTunerHostInfo preferEpgChannelImages(Boolean preferEpgChannelImages) {
+    this.preferEpgChannelImages = preferEpgChannelImages;
+    return this;
+  }
+
+   /**
+   * Get preferEpgChannelImages
+   * @return preferEpgChannelImages
+  **/
+  @Schema(description = "")
+  public Boolean isPreferEpgChannelImages() {
+    return preferEpgChannelImages;
+  }
+
+  public void setPreferEpgChannelImages(Boolean preferEpgChannelImages) {
+    this.preferEpgChannelImages = preferEpgChannelImages;
+  }
+
+  public LiveTvTunerHostInfo preferEpgChannelNumbers(Boolean preferEpgChannelNumbers) {
+    this.preferEpgChannelNumbers = preferEpgChannelNumbers;
+    return this;
+  }
+
+   /**
+   * Get preferEpgChannelNumbers
+   * @return preferEpgChannelNumbers
+  **/
+  @Schema(description = "")
+  public Boolean isPreferEpgChannelNumbers() {
+    return preferEpgChannelNumbers;
+  }
+
+  public void setPreferEpgChannelNumbers(Boolean preferEpgChannelNumbers) {
+    this.preferEpgChannelNumbers = preferEpgChannelNumbers;
+  }
+
   public LiveTvTunerHostInfo allowHWTranscoding(Boolean allowHWTranscoding) {
     this.allowHWTranscoding = allowHWTranscoding;
     return this;
@@ -204,6 +252,42 @@ public class LiveTvTunerHostInfo {
 
   public void setAllowHWTranscoding(Boolean allowHWTranscoding) {
     this.allowHWTranscoding = allowHWTranscoding;
+  }
+
+  public LiveTvTunerHostInfo allowMappingByNumber(Boolean allowMappingByNumber) {
+    this.allowMappingByNumber = allowMappingByNumber;
+    return this;
+  }
+
+   /**
+   * Get allowMappingByNumber
+   * @return allowMappingByNumber
+  **/
+  @Schema(description = "")
+  public Boolean isAllowMappingByNumber() {
+    return allowMappingByNumber;
+  }
+
+  public void setAllowMappingByNumber(Boolean allowMappingByNumber) {
+    this.allowMappingByNumber = allowMappingByNumber;
+  }
+
+  public LiveTvTunerHostInfo importGuideData(Boolean importGuideData) {
+    this.importGuideData = importGuideData;
+    return this;
+  }
+
+   /**
+   * Get importGuideData
+   * @return importGuideData
+  **/
+  @Schema(description = "")
+  public Boolean isImportGuideData() {
+    return importGuideData;
+  }
+
+  public void setImportGuideData(Boolean importGuideData) {
+    this.importGuideData = importGuideData;
   }
 
   public LiveTvTunerHostInfo source(String source) {
@@ -331,7 +415,11 @@ public class LiveTvTunerHostInfo {
         Objects.equals(this.friendlyName, liveTvTunerHostInfo.friendlyName) &&
         Objects.equals(this.setupUrl, liveTvTunerHostInfo.setupUrl) &&
         Objects.equals(this.importFavoritesOnly, liveTvTunerHostInfo.importFavoritesOnly) &&
+        Objects.equals(this.preferEpgChannelImages, liveTvTunerHostInfo.preferEpgChannelImages) &&
+        Objects.equals(this.preferEpgChannelNumbers, liveTvTunerHostInfo.preferEpgChannelNumbers) &&
         Objects.equals(this.allowHWTranscoding, liveTvTunerHostInfo.allowHWTranscoding) &&
+        Objects.equals(this.allowMappingByNumber, liveTvTunerHostInfo.allowMappingByNumber) &&
+        Objects.equals(this.importGuideData, liveTvTunerHostInfo.importGuideData) &&
         Objects.equals(this.source, liveTvTunerHostInfo.source) &&
         Objects.equals(this.tunerCount, liveTvTunerHostInfo.tunerCount) &&
         Objects.equals(this.userAgent, liveTvTunerHostInfo.userAgent) &&
@@ -342,7 +430,7 @@ public class LiveTvTunerHostInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, url, type, deviceId, friendlyName, setupUrl, importFavoritesOnly, allowHWTranscoding, source, tunerCount, userAgent, referrer, providerOptions, dataVersion);
+    return Objects.hash(id, url, type, deviceId, friendlyName, setupUrl, importFavoritesOnly, preferEpgChannelImages, preferEpgChannelNumbers, allowHWTranscoding, allowMappingByNumber, importGuideData, source, tunerCount, userAgent, referrer, providerOptions, dataVersion);
   }
 
 
@@ -358,7 +446,11 @@ public class LiveTvTunerHostInfo {
     sb.append("    friendlyName: ").append(toIndentedString(friendlyName)).append("\n");
     sb.append("    setupUrl: ").append(toIndentedString(setupUrl)).append("\n");
     sb.append("    importFavoritesOnly: ").append(toIndentedString(importFavoritesOnly)).append("\n");
+    sb.append("    preferEpgChannelImages: ").append(toIndentedString(preferEpgChannelImages)).append("\n");
+    sb.append("    preferEpgChannelNumbers: ").append(toIndentedString(preferEpgChannelNumbers)).append("\n");
     sb.append("    allowHWTranscoding: ").append(toIndentedString(allowHWTranscoding)).append("\n");
+    sb.append("    allowMappingByNumber: ").append(toIndentedString(allowMappingByNumber)).append("\n");
+    sb.append("    importGuideData: ").append(toIndentedString(importGuideData)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    tunerCount: ").append(toIndentedString(tunerCount)).append("\n");
     sb.append("    userAgent: ").append(toIndentedString(userAgent)).append("\n");

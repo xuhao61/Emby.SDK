@@ -1,8 +1,8 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.7.5.0
+ * OpenAPI spec version: 4.8.3.0
  * 
  *
  * NOTE: This file is auto generated.
@@ -44,14 +44,15 @@ describe("ArtistsServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -79,9 +80,15 @@ describe("ArtistsServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -89,6 +96,7 @@ describe("ArtistsServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -106,7 +114,9 @@ describe("ArtistsServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -122,7 +132,7 @@ describe("ArtistsServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getArtists(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getArtists(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getArtistsAlbumartists", () => {
     const artistType: string = "artistType_example"
@@ -134,14 +144,15 @@ describe("ArtistsServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -169,9 +180,15 @@ describe("ArtistsServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -179,6 +196,7 @@ describe("ArtistsServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -196,7 +214,9 @@ describe("ArtistsServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -212,7 +232,7 @@ describe("ArtistsServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getArtistsAlbumartists(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getArtistsAlbumartists(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getArtistsByName", () => {
     const name: string = "name_example"
@@ -227,6 +247,34 @@ describe("AudioServiceApi", () => {
     instance = new api.AudioServiceApi(config)
   });
 
+  test("getAudioByIdByStreamfilename", () => {
+    const streamFileName: string = "streamFileName_example"
+    const id: string = "id_example"
+    const container: string = "container_example"
+    const deviceProfileId: string = "deviceProfileId_example"
+    const deviceId: string = "deviceId_example"
+    const audioCodec: string = "audioCodec_example"
+    const enableAutoStreamCopy: boolean = true
+    const audioSampleRate: number = 56
+    const audioBitRate: number = 56
+    const audioChannels: number = 56
+    const maxAudioChannels: number = 56
+    const _static: boolean = true
+    const copyTimestamps: boolean = true
+    const startTimeTicks: number = 789
+    const width: number = 56
+    const height: number = 56
+    const maxWidth: number = 56
+    const maxHeight: number = 56
+    const videoBitRate: number = 56
+    const subtitleStreamIndex: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
+    const maxVideoBitDepth: number = 56
+    const videoCodec: string = "videoCodec_example"
+    const audioStreamIndex: number = 56
+    const videoStreamIndex: number = 56
+    return expect(instance.getAudioByIdByStreamfilename(streamFileName, id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+  })
   test("getAudioByIdStream", () => {
     const id: string = "id_example"
     const container: string = "container_example"
@@ -239,10 +287,6 @@ describe("AudioServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -251,13 +295,12 @@ describe("AudioServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.getAudioByIdStream(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.getAudioByIdStream(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("getAudioByIdStreamByContainer", () => {
     const id: string = "id_example"
@@ -271,10 +314,6 @@ describe("AudioServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -283,13 +322,40 @@ describe("AudioServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.getAudioByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.getAudioByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+  })
+  test("headAudioByIdByStreamfilename", () => {
+    const streamFileName: string = "streamFileName_example"
+    const id: string = "id_example"
+    const container: string = "container_example"
+    const deviceProfileId: string = "deviceProfileId_example"
+    const deviceId: string = "deviceId_example"
+    const audioCodec: string = "audioCodec_example"
+    const enableAutoStreamCopy: boolean = true
+    const audioSampleRate: number = 56
+    const audioBitRate: number = 56
+    const audioChannels: number = 56
+    const maxAudioChannels: number = 56
+    const _static: boolean = true
+    const copyTimestamps: boolean = true
+    const startTimeTicks: number = 789
+    const width: number = 56
+    const height: number = 56
+    const maxWidth: number = 56
+    const maxHeight: number = 56
+    const videoBitRate: number = 56
+    const subtitleStreamIndex: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
+    const maxVideoBitDepth: number = 56
+    const videoCodec: string = "videoCodec_example"
+    const audioStreamIndex: number = 56
+    const videoStreamIndex: number = 56
+    return expect(instance.headAudioByIdByStreamfilename(streamFileName, id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("headAudioByIdStream", () => {
     const id: string = "id_example"
@@ -303,10 +369,6 @@ describe("AudioServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -315,13 +377,12 @@ describe("AudioServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.headAudioByIdStream(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.headAudioByIdStream(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("headAudioByIdStreamByContainer", () => {
     const id: string = "id_example"
@@ -335,10 +396,6 @@ describe("AudioServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -347,13 +404,31 @@ describe("AudioServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.headAudioByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.headAudioByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+  })
+})
+
+describe("BackupApiApi", () => {
+  let instance: api.BackupApiApi
+  beforeEach(function() {
+    instance = new api.BackupApiApi(config)
+  });
+
+  test("getBackuprestoreBackupinfo", () => {
+    return expect(instance.getBackuprestoreBackupinfo({})).resolves.toBe(null)
+  })
+  test("postBackuprestoreRestore", () => {
+    const body: api.MBBackupApiRestoreOptions = undefined
+    return expect(instance.postBackuprestoreRestore(body, {})).resolves.toBe(null)
+  })
+  test("postBackuprestoreRestoredata", () => {
+    const body: api.MBBackupApiDataRestoreOptions = undefined
+    return expect(instance.postBackuprestoreRestoredata(body, {})).resolves.toBe(null)
   })
 })
 
@@ -401,8 +476,32 @@ describe("ChannelServiceApi", () => {
   test("getChannels", () => {
     const userId: string = "userId_example"
     const startIndex: number = 56
+    const fields: string = "fields_example"
     const limit: number = 56
-    return expect(instance.getChannels(userId, startIndex, limit, {})).resolves.toBe(null)
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    return expect(instance.getChannels(userId, startIndex, fields, limit, enableImages, imageTypeLimit, enableImageTypes, enableUserData, {})).resolves.toBe(null)
+  })
+})
+
+describe("CodecParameterServiceApi", () => {
+  let instance: api.CodecParameterServiceApi
+  beforeEach(function() {
+    instance = new api.CodecParameterServiceApi(config)
+  });
+
+  test("getEncodingCodecparameters", () => {
+    const codecId: string = "codecId_example"
+    const parameterContext: MediaEncodingCodecParameterContext = undefined
+    return expect(instance.getEncodingCodecparameters(codecId, parameterContext, {})).resolves.toBe(null)
+  })
+  test("postEncodingCodecparameters", () => {
+    const body: Object = undefined
+    const codecId: string = "codecId_example"
+    const parameterContext: MediaEncodingCodecParameterContext = undefined
+    return expect(instance.postEncodingCodecparameters(body, codecId, parameterContext, {})).resolves.toBe(null)
   })
 })
 
@@ -450,13 +549,17 @@ describe("ConfigurationServiceApi", () => {
     return expect(instance.getSystemConfigurationByKey(key, {})).resolves.toBe(null)
   })
   test("postSystemConfiguration", () => {
-    const body: api.ConfigurationServerConfiguration = undefined
+    const body: api.ServerConfiguration = undefined
     return expect(instance.postSystemConfiguration(body, {})).resolves.toBe(null)
   })
   test("postSystemConfigurationByKey", () => {
     const body: Object = undefined
     const key: string = "key_example"
     return expect(instance.postSystemConfigurationByKey(body, key, {})).resolves.toBe(null)
+  })
+  test("postSystemConfigurationPartial", () => {
+    const body: api.ServerConfiguration = undefined
+    return expect(instance.postSystemConfigurationPartial(body, {})).resolves.toBe(null)
   })
 })
 
@@ -488,23 +591,6 @@ describe("ConnectServiceApi", () => {
   })
 })
 
-describe("DashboardServiceApi", () => {
-  let instance: api.DashboardServiceApi
-  beforeEach(function() {
-    instance = new api.DashboardServiceApi(config)
-  });
-
-  test("getWebConfigurationpage", () => {
-    return expect(instance.getWebConfigurationpage({})).resolves.toBe(null)
-  })
-  test("getWebConfigurationpages", () => {
-    return expect(instance.getWebConfigurationpages({})).resolves.toBe(null)
-  })
-  test("getWebStrings", () => {
-    return expect(instance.getWebStrings({})).resolves.toBe(null)
-  })
-})
-
 describe("DeviceServiceApi", () => {
   let instance: api.DeviceServiceApi
   beforeEach(function() {
@@ -516,11 +602,11 @@ describe("DeviceServiceApi", () => {
     return expect(instance.deleteDevices(id, {})).resolves.toBe(null)
   })
   test("getDevices", () => {
-    return expect(instance.getDevices({})).resolves.toBe(null)
+    const sortOrder: string = "sortOrder_example"
+    return expect(instance.getDevices(sortOrder, {})).resolves.toBe(null)
   })
   test("getDevicesCamerauploads", () => {
-    const deviceId: string = "deviceId_example"
-    return expect(instance.getDevicesCamerauploads(deviceId, {})).resolves.toBe(null)
+    return expect(instance.getDevicesCamerauploads({})).resolves.toBe(null)
   })
   test("getDevicesInfo", () => {
     const id: string = "id_example"
@@ -532,11 +618,10 @@ describe("DeviceServiceApi", () => {
   })
   test("postDevicesCamerauploads", () => {
     const body: Object = undefined
-    const deviceId: string = "deviceId_example"
     const album: string = "album_example"
     const name: string = "name_example"
     const id: string = "id_example"
-    return expect(instance.postDevicesCamerauploads(body, deviceId, album, name, id, {})).resolves.toBe(null)
+    return expect(instance.postDevicesCamerauploads(body, album, name, id, {})).resolves.toBe(null)
   })
   test("postDevicesDelete", () => {
     const id: string = "id_example"
@@ -642,11 +727,11 @@ describe("DlnaServiceApi", () => {
     return expect(instance.getDlnaProfilesDefault({})).resolves.toBe(null)
   })
   test("postDlnaProfiles", () => {
-    const body: api.EmbyDlnaProfilesDlnaProfile = undefined
+    const body: api.DlnaProfilesDlnaProfile = undefined
     return expect(instance.postDlnaProfiles(body, {})).resolves.toBe(null)
   })
   test("postDlnaProfilesById", () => {
-    const body: api.EmbyDlnaProfilesDlnaProfile = undefined
+    const body: api.DlnaProfilesDlnaProfile = undefined
     const id: string = "id_example"
     return expect(instance.postDlnaProfilesById(body, id, {})).resolves.toBe(null)
   })
@@ -665,6 +750,33 @@ describe("DynamicHlsServiceApi", () => {
     const playlistId: string = "playlistId_example"
     return expect(instance.getAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer(segmentContainer, segmentId, id, playlistId, {})).resolves.toBe(null)
   })
+  test("getAudioByIdLiveM3u8", () => {
+    const id: string = "id_example"
+    const container: string = "container_example"
+    const deviceProfileId: string = "deviceProfileId_example"
+    const deviceId: string = "deviceId_example"
+    const audioCodec: string = "audioCodec_example"
+    const enableAutoStreamCopy: boolean = true
+    const audioSampleRate: number = 56
+    const audioBitRate: number = 56
+    const audioChannels: number = 56
+    const maxAudioChannels: number = 56
+    const _static: boolean = true
+    const copyTimestamps: boolean = true
+    const startTimeTicks: number = 789
+    const width: number = 56
+    const height: number = 56
+    const maxWidth: number = 56
+    const maxHeight: number = 56
+    const videoBitRate: number = 56
+    const subtitleStreamIndex: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
+    const maxVideoBitDepth: number = 56
+    const videoCodec: string = "videoCodec_example"
+    const audioStreamIndex: number = 56
+    const videoStreamIndex: number = 56
+    return expect(instance.getAudioByIdLiveM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+  })
   test("getAudioByIdMainM3u8", () => {
     const id: string = "id_example"
     const container: string = "container_example"
@@ -677,10 +789,6 @@ describe("DynamicHlsServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -689,13 +797,12 @@ describe("DynamicHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.getAudioByIdMainM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.getAudioByIdMainM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("getAudioByIdMasterM3u8", () => {
     const id: string = "id_example"
@@ -709,10 +816,6 @@ describe("DynamicHlsServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -721,13 +824,12 @@ describe("DynamicHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.getAudioByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.getAudioByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("getVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer", () => {
     const segmentContainer: string = "segmentContainer_example"
@@ -735,6 +837,33 @@ describe("DynamicHlsServiceApi", () => {
     const id: string = "id_example"
     const playlistId: string = "playlistId_example"
     return expect(instance.getVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer(segmentContainer, segmentId, id, playlistId, {})).resolves.toBe(null)
+  })
+  test("getVideosByIdLiveM3u8", () => {
+    const id: string = "id_example"
+    const container: string = "container_example"
+    const deviceProfileId: string = "deviceProfileId_example"
+    const deviceId: string = "deviceId_example"
+    const audioCodec: string = "audioCodec_example"
+    const enableAutoStreamCopy: boolean = true
+    const audioSampleRate: number = 56
+    const audioBitRate: number = 56
+    const audioChannels: number = 56
+    const maxAudioChannels: number = 56
+    const _static: boolean = true
+    const copyTimestamps: boolean = true
+    const startTimeTicks: number = 789
+    const width: number = 56
+    const height: number = 56
+    const maxWidth: number = 56
+    const maxHeight: number = 56
+    const videoBitRate: number = 56
+    const subtitleStreamIndex: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
+    const maxVideoBitDepth: number = 56
+    const videoCodec: string = "videoCodec_example"
+    const audioStreamIndex: number = 56
+    const videoStreamIndex: number = 56
+    return expect(instance.getVideosByIdLiveM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("getVideosByIdLiveSubtitlesM3u8", () => {
     const id: string = "id_example"
@@ -754,10 +883,6 @@ describe("DynamicHlsServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -766,13 +891,12 @@ describe("DynamicHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.getVideosByIdMainM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.getVideosByIdMainM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("getVideosByIdMasterM3u8", () => {
     const id: string = "id_example"
@@ -786,10 +910,6 @@ describe("DynamicHlsServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -798,13 +918,12 @@ describe("DynamicHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.getVideosByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.getVideosByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("getVideosByIdSubtitlesM3u8", () => {
     const id: string = "id_example"
@@ -831,10 +950,6 @@ describe("DynamicHlsServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -843,13 +958,12 @@ describe("DynamicHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.headAudioByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.headAudioByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("headVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer", () => {
     const segmentContainer: string = "segmentContainer_example"
@@ -870,10 +984,6 @@ describe("DynamicHlsServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -882,13 +992,12 @@ describe("DynamicHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.headVideosByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.headVideosByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
 })
 
@@ -938,10 +1047,28 @@ describe("EnvironmentServiceApi", () => {
     const path: string = "path_example"
     return expect(instance.getEnvironmentParentpath(path, {})).resolves.toBe(null)
   })
+  test("postEnvironmentDirectorycontents", () => {
+    const body: api.GetDirectoryContents = undefined
+    const path: string = "path_example"
+    const includeFiles: boolean = true
+    const includeDirectories: boolean = true
+    return expect(instance.postEnvironmentDirectorycontents(body, path, includeFiles, includeDirectories, {})).resolves.toBe(null)
+  })
   test("postEnvironmentValidatepath", () => {
     const body: api.ValidatePath = undefined
     const path: string = "path_example"
     return expect(instance.postEnvironmentValidatepath(body, path, {})).resolves.toBe(null)
+  })
+})
+
+describe("FeatureServiceApi", () => {
+  let instance: api.FeatureServiceApi
+  beforeEach(function() {
+    instance = new api.FeatureServiceApi(config)
+  });
+
+  test("getFeatures", () => {
+    return expect(instance.getFeatures({})).resolves.toBe(null)
   })
 })
 
@@ -976,14 +1103,15 @@ describe("GameGenresServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -1011,9 +1139,15 @@ describe("GameGenresServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -1021,6 +1155,7 @@ describe("GameGenresServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -1038,7 +1173,9 @@ describe("GameGenresServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -1054,7 +1191,7 @@ describe("GameGenresServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getGamegenres(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getGamegenres(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getGamegenresByName", () => {
     const name: string = "name_example"
@@ -1063,15 +1200,20 @@ describe("GameGenresServiceApi", () => {
   })
 })
 
-describe("GamesServiceApi", () => {
-  let instance: api.GamesServiceApi
+describe("GenericUIApiServiceApi", () => {
+  let instance: api.GenericUIApiServiceApi
   beforeEach(function() {
-    instance = new api.GamesServiceApi(config)
+    instance = new api.GenericUIApiServiceApi(config)
   });
 
-  test("getGamesSystemsummaries", () => {
-    const userId: string = "userId_example"
-    return expect(instance.getGamesSystemsummaries(userId, {})).resolves.toBe(null)
+  test("getUIView", () => {
+    const pageId: string = "pageId_example"
+    const clientLocale: string = "clientLocale_example"
+    return expect(instance.getUIView(pageId, clientLocale, {})).resolves.toBe(null)
+  })
+  test("postUICommand", () => {
+    const body: api.RunUICommand = undefined
+    return expect(instance.postUICommand(body, {})).resolves.toBe(null)
   })
 })
 
@@ -1091,14 +1233,15 @@ describe("GenresServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -1126,9 +1269,15 @@ describe("GenresServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -1136,6 +1285,7 @@ describe("GenresServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -1153,7 +1303,9 @@ describe("GenresServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -1169,7 +1321,7 @@ describe("GenresServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getGenres(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getGenres(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getGenresByName", () => {
     const name: string = "name_example"
@@ -1193,38 +1345,6 @@ describe("HlsSegmentServiceApi", () => {
     const deviceId: string = "deviceId_example"
     const playSessionId: string = "playSessionId_example"
     return expect(instance.postVideosActiveencodingsDelete(deviceId, playSessionId, {})).resolves.toBe(null)
-  })
-})
-
-describe("ImageByNameServiceApi", () => {
-  let instance: api.ImageByNameServiceApi
-  beforeEach(function() {
-    instance = new api.ImageByNameServiceApi(config)
-  });
-
-  test("getImagesGeneral", () => {
-    return expect(instance.getImagesGeneral({})).resolves.toBe(null)
-  })
-  test("getImagesGeneralByNameByType", () => {
-    const name: string = "name_example"
-    const type: string = "type_example"
-    return expect(instance.getImagesGeneralByNameByType(name, type, {})).resolves.toBe(null)
-  })
-  test("getImagesMediainfo", () => {
-    return expect(instance.getImagesMediainfo({})).resolves.toBe(null)
-  })
-  test("getImagesMediainfoByThemeByName", () => {
-    const name: string = "name_example"
-    const theme: string = "theme_example"
-    return expect(instance.getImagesMediainfoByThemeByName(name, theme, {})).resolves.toBe(null)
-  })
-  test("getImagesRatings", () => {
-    return expect(instance.getImagesRatings({})).resolves.toBe(null)
-  })
-  test("getImagesRatingsByThemeByName", () => {
-    const name: string = "name_example"
-    const theme: string = "theme_example"
-    return expect(instance.getImagesRatingsByThemeByName(name, theme, {})).resolves.toBe(null)
   })
 })
 
@@ -1270,14 +1390,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.getArtistsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getArtistsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("getArtistsByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1292,13 +1410,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.getArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getGamegenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1312,14 +1428,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.getGamegenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getGamegenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("getGamegenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1334,13 +1448,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.getGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getGenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1354,14 +1466,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.getGenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getGenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("getGenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1376,13 +1486,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.getGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getItemsByIdImages", () => {
     const id: string = "id_example"
@@ -1400,14 +1508,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.getItemsByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getItemsByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("getItemsByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
@@ -1422,22 +1528,20 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.getItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount", () => {
+    const percentPlayed: number = 56
+    const unPlayedCount: number = 56
     const id: string = "id_example"
     const maxWidth: number = 56
     const maxHeight: number = 56
     const tag: string = "tag_example"
     const format: string = "format_example"
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const type: ImageType = undefined
     const index: number = 56
     const width: number = 56
@@ -1445,11 +1549,11 @@ describe("ImageServiceApi", () => {
     const quality: number = 56
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
-    const addPlayedIndicator: boolean = true
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getMusicgenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1463,14 +1567,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.getMusicgenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getMusicgenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("getMusicgenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1485,13 +1587,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.getMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getPersonsByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1505,14 +1605,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.getPersonsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getPersonsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("getPersonsByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1527,13 +1625,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.getPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getStudiosByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1547,14 +1643,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.getStudiosByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getStudiosByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("getStudiosByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1569,13 +1663,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.getStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getUsersByIdImagesByType", () => {
     const id: string = "id_example"
@@ -1589,14 +1681,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.getUsersByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.getUsersByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("getUsersByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
@@ -1611,13 +1701,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.getUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.getUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headArtistsByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1631,14 +1719,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.headArtistsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headArtistsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("headArtistsByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1653,13 +1739,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.headArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headGamegenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1673,14 +1757,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.headGamegenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headGamegenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("headGamegenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1695,13 +1777,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.headGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headGenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1715,14 +1795,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.headGenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headGenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("headGenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1737,13 +1815,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.headGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headItemsByIdImagesByType", () => {
     const id: string = "id_example"
@@ -1757,14 +1833,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.headItemsByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headItemsByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("headItemsByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
@@ -1779,22 +1853,20 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.headItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount", () => {
+    const percentPlayed: number = 56
+    const unPlayedCount: number = 56
     const id: string = "id_example"
     const maxWidth: number = 56
     const maxHeight: number = 56
     const tag: string = "tag_example"
     const format: string = "format_example"
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const type: ImageType = undefined
     const index: number = 56
     const width: number = 56
@@ -1802,11 +1874,11 @@ describe("ImageServiceApi", () => {
     const quality: number = 56
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
-    const addPlayedIndicator: boolean = true
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(id, maxWidth, maxHeight, tag, format, percentPlayed, unplayedCount, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, addPlayedIndicator, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headMusicgenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1820,14 +1892,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.headMusicgenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headMusicgenresByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("headMusicgenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1842,13 +1912,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.headMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headPersonsByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1862,14 +1930,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.headPersonsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headPersonsByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("headPersonsByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1884,13 +1950,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.headPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headStudiosByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1904,14 +1968,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.headStudiosByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headStudiosByNameImagesByType(name, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("headStudiosByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
@@ -1926,13 +1988,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.headStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headUsersByIdImagesByType", () => {
     const id: string = "id_example"
@@ -1946,14 +2006,12 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
+    const keepAnimation: boolean = true
     const index: number = 56
-    return expect(instance.headUsersByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, index, {})).resolves.toBe(null)
+    return expect(instance.headUsersByIdImagesByType(id, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, {})).resolves.toBe(null)
   })
   test("headUsersByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
@@ -1968,13 +2026,11 @@ describe("ImageServiceApi", () => {
     const cropWhitespace: boolean = true
     const enableImageEnhancers: boolean = true
     const format: string = "format_example"
-    const addPlayedIndicator: boolean = true
-    const percentPlayed: number = 1.2
-    const unplayedCount: number = 56
     const backgroundColor: string = "backgroundColor_example"
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
-    return expect(instance.headUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, addPlayedIndicator, percentPlayed, unplayedCount, backgroundColor, foregroundLayer, autoOrient, {})).resolves.toBe(null)
+    const keepAnimation: boolean = true
+    return expect(instance.headUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("postItemsByIdImagesByType", () => {
     const body: Object = undefined
@@ -2162,6 +2218,10 @@ describe("ItemLookupServiceApi", () => {
     const providerName: string = "providerName_example"
     return expect(instance.getItemsRemotesearchImage(imageUrl, providerName, {})).resolves.toBe(null)
   })
+  test("postItemsMetadataReset", () => {
+    const itemIds: string = "itemIds_example"
+    return expect(instance.postItemsMetadataReset(itemIds, {})).resolves.toBe(null)
+  })
   test("postItemsRemotesearchApplyById", () => {
     const body: api.RemoteSearchResult = undefined
     const id: string = "id_example"
@@ -2169,43 +2229,43 @@ describe("ItemLookupServiceApi", () => {
     return expect(instance.postItemsRemotesearchApplyById(body, id, replaceAllImages, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchBook", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersBookInfo = undefined
+    const body: api.RemoteSearchQueryBookInfo = undefined
     return expect(instance.postItemsRemotesearchBook(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchBoxset", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersItemLookupInfo = undefined
+    const body: api.RemoteSearchQueryItemLookupInfo = undefined
     return expect(instance.postItemsRemotesearchBoxset(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchGame", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersGameInfo = undefined
+    const body: api.RemoteSearchQueryGameInfo = undefined
     return expect(instance.postItemsRemotesearchGame(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchMovie", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersMovieInfo = undefined
+    const body: api.RemoteSearchQueryMovieInfo = undefined
     return expect(instance.postItemsRemotesearchMovie(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchMusicalbum", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersAlbumInfo = undefined
+    const body: api.RemoteSearchQueryAlbumInfo = undefined
     return expect(instance.postItemsRemotesearchMusicalbum(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchMusicartist", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersArtistInfo = undefined
+    const body: api.RemoteSearchQueryArtistInfo = undefined
     return expect(instance.postItemsRemotesearchMusicartist(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchMusicvideo", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersMusicVideoInfo = undefined
+    const body: api.RemoteSearchQueryMusicVideoInfo = undefined
     return expect(instance.postItemsRemotesearchMusicvideo(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchPerson", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersPersonLookupInfo = undefined
+    const body: api.RemoteSearchQueryPersonLookupInfo = undefined
     return expect(instance.postItemsRemotesearchPerson(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchSeries", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersSeriesInfo = undefined
+    const body: api.RemoteSearchQuerySeriesInfo = undefined
     return expect(instance.postItemsRemotesearchSeries(body, {})).resolves.toBe(null)
   })
   test("postItemsRemotesearchTrailer", () => {
-    const body: api.ProvidersRemoteSearchQueryProvidersTrailerInfo = undefined
+    const body: api.RemoteSearchQueryTrailerInfo = undefined
     return expect(instance.postItemsRemotesearchTrailer(body, {})).resolves.toBe(null)
   })
 })
@@ -2219,8 +2279,8 @@ describe("ItemRefreshServiceApi", () => {
   test("postItemsByIdRefresh", () => {
     const id: string = "id_example"
     const recursive: boolean = true
-    const metadataRefreshMode: ProvidersMetadataRefreshMode = undefined
-    const imageRefreshMode: ProvidersMetadataRefreshMode = undefined
+    const metadataRefreshMode: MetadataRefreshMode = undefined
+    const imageRefreshMode: MetadataRefreshMode = undefined
     const replaceAllMetadata: boolean = true
     const replaceAllImages: boolean = true
     return expect(instance.postItemsByIdRefresh(id, recursive, metadataRefreshMode, imageRefreshMode, replaceAllMetadata, replaceAllImages, {})).resolves.toBe(null)
@@ -2260,14 +2320,15 @@ describe("ItemsServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -2295,9 +2356,15 @@ describe("ItemsServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -2305,6 +2372,7 @@ describe("ItemsServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -2322,7 +2390,9 @@ describe("ItemsServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -2338,7 +2408,7 @@ describe("ItemsServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getItems(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getItems(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getUsersByUseridItems", () => {
     const userId: string = "userId_example"
@@ -2351,14 +2421,15 @@ describe("ItemsServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -2386,9 +2457,15 @@ describe("ItemsServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -2396,6 +2473,7 @@ describe("ItemsServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -2413,7 +2491,9 @@ describe("ItemsServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const minOfficialRating: string = "minOfficialRating_example"
@@ -2428,7 +2508,7 @@ describe("ItemsServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getUsersByUseridItems(userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getUsersByUseridItems(userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getUsersByUseridItemsResume", () => {
     const userId: string = "userId_example"
@@ -2441,14 +2521,15 @@ describe("ItemsServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -2476,9 +2557,15 @@ describe("ItemsServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -2486,6 +2573,7 @@ describe("ItemsServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -2503,7 +2591,9 @@ describe("ItemsServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const minOfficialRating: string = "minOfficialRating_example"
@@ -2518,7 +2608,7 @@ describe("ItemsServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getUsersByUseridItemsResume(userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getUsersByUseridItemsResume(userId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
 })
 
@@ -2611,19 +2701,34 @@ describe("LibraryServiceApi", () => {
     const id: string = "id_example"
     const userId: string = "userId_example"
     const inheritFromParent: boolean = true
-    return expect(instance.getItemsByIdThememedia(id, userId, inheritFromParent, {})).resolves.toBe(null)
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    const fields: string = "fields_example"
+    return expect(instance.getItemsByIdThememedia(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, {})).resolves.toBe(null)
   })
   test("getItemsByIdThemesongs", () => {
     const id: string = "id_example"
     const userId: string = "userId_example"
     const inheritFromParent: boolean = true
-    return expect(instance.getItemsByIdThemesongs(id, userId, inheritFromParent, {})).resolves.toBe(null)
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    const fields: string = "fields_example"
+    return expect(instance.getItemsByIdThemesongs(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, {})).resolves.toBe(null)
   })
   test("getItemsByIdThemevideos", () => {
     const id: string = "id_example"
     const userId: string = "userId_example"
     const inheritFromParent: boolean = true
-    return expect(instance.getItemsByIdThemevideos(id, userId, inheritFromParent, {})).resolves.toBe(null)
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    const fields: string = "fields_example"
+    return expect(instance.getItemsByIdThemevideos(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, {})).resolves.toBe(null)
   })
   test("getItemsCounts", () => {
     const userId: string = "userId_example"
@@ -2758,6 +2863,75 @@ describe("LibraryStructureServiceApi", () => {
   })
 })
 
+describe("LiveStreamServiceApi", () => {
+  let instance: api.LiveStreamServiceApi
+  beforeEach(function() {
+    instance = new api.LiveStreamServiceApi(config)
+  });
+
+  test("getLivetvLiverecordingsByIdHlsBySegment", () => {
+    const id: string = "id_example"
+    const segment: string = "segment_example"
+    return expect(instance.getLivetvLiverecordingsByIdHlsBySegment(id, segment, {})).resolves.toBe(null)
+  })
+  test("getLivetvLiverecordingsByIdHlsLiveM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.getLivetvLiverecordingsByIdHlsLiveM3u8(id, {})).resolves.toBe(null)
+  })
+  test("getLivetvLiverecordingsByIdHlsMasterM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.getLivetvLiverecordingsByIdHlsMasterM3u8(id, {})).resolves.toBe(null)
+  })
+  test("getLivetvLiverecordingsByIdStream", () => {
+    const id: string = "id_example"
+    return expect(instance.getLivetvLiverecordingsByIdStream(id, {})).resolves.toBe(null)
+  })
+  test("getLivetvLivestreamfilesByIdHlsBySegment", () => {
+    const id: string = "id_example"
+    const segment: string = "segment_example"
+    return expect(instance.getLivetvLivestreamfilesByIdHlsBySegment(id, segment, {})).resolves.toBe(null)
+  })
+  test("getLivetvLivestreamfilesByIdHlsLiveM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.getLivetvLivestreamfilesByIdHlsLiveM3u8(id, {})).resolves.toBe(null)
+  })
+  test("getLivetvLivestreamfilesByIdHlsMasterM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.getLivetvLivestreamfilesByIdHlsMasterM3u8(id, {})).resolves.toBe(null)
+  })
+  test("getLivetvLivestreamfilesByIdStreamByContainer", () => {
+    const id: string = "id_example"
+    const container: string = "container_example"
+    return expect(instance.getLivetvLivestreamfilesByIdStreamByContainer(id, container, {})).resolves.toBe(null)
+  })
+  test("headLivetvLiverecordingsByIdHlsBySegment", () => {
+    const id: string = "id_example"
+    const segment: string = "segment_example"
+    return expect(instance.headLivetvLiverecordingsByIdHlsBySegment(id, segment, {})).resolves.toBe(null)
+  })
+  test("headLivetvLiverecordingsByIdHlsLiveM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.headLivetvLiverecordingsByIdHlsLiveM3u8(id, {})).resolves.toBe(null)
+  })
+  test("headLivetvLiverecordingsByIdHlsMasterM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.headLivetvLiverecordingsByIdHlsMasterM3u8(id, {})).resolves.toBe(null)
+  })
+  test("headLivetvLivestreamfilesByIdHlsBySegment", () => {
+    const id: string = "id_example"
+    const segment: string = "segment_example"
+    return expect(instance.headLivetvLivestreamfilesByIdHlsBySegment(id, segment, {})).resolves.toBe(null)
+  })
+  test("headLivetvLivestreamfilesByIdHlsLiveM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.headLivetvLivestreamfilesByIdHlsLiveM3u8(id, {})).resolves.toBe(null)
+  })
+  test("headLivetvLivestreamfilesByIdHlsMasterM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.headLivetvLivestreamfilesByIdHlsMasterM3u8(id, {})).resolves.toBe(null)
+  })
+})
+
 describe("LiveTvServiceApi", () => {
   let instance: api.LiveTvServiceApi
   beforeEach(function() {
@@ -2792,6 +2966,9 @@ describe("LiveTvServiceApi", () => {
     const id: string = "id_example"
     return expect(instance.deleteLivetvTunerhosts(id, {})).resolves.toBe(null)
   })
+  test("getLivetvAvailablerecordingoptions", () => {
+    return expect(instance.getLivetvAvailablerecordingoptions({})).resolves.toBe(null)
+  })
   test("getLivetvChannelmappingoptions", () => {
     const providerId: string = "providerId_example"
     return expect(instance.getLivetvChannelmappingoptions(providerId, {})).resolves.toBe(null)
@@ -2815,14 +2992,15 @@ describe("LiveTvServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -2850,9 +3028,15 @@ describe("LiveTvServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -2860,6 +3044,7 @@ describe("LiveTvServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -2877,7 +3062,9 @@ describe("LiveTvServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -2893,7 +3080,7 @@ describe("LiveTvServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getLivetvChannels(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getLivetvChannels(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getLivetvChannelsById", () => {
     const id: string = "id_example"
@@ -2910,14 +3097,15 @@ describe("LiveTvServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -2945,9 +3133,15 @@ describe("LiveTvServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -2955,6 +3149,7 @@ describe("LiveTvServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -2972,7 +3167,9 @@ describe("LiveTvServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -2988,7 +3185,7 @@ describe("LiveTvServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getLivetvChanneltags(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getLivetvChanneltags(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getLivetvChanneltagsPrefixes", () => {
     const artistType: string = "artistType_example"
@@ -3000,14 +3197,15 @@ describe("LiveTvServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -3035,9 +3233,15 @@ describe("LiveTvServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -3045,6 +3249,7 @@ describe("LiveTvServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -3062,7 +3267,9 @@ describe("LiveTvServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -3078,35 +3285,113 @@ describe("LiveTvServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getLivetvChanneltagsPrefixes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getLivetvChanneltagsPrefixes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getLivetvEPG", () => {
     const type: LiveTvChannelType = undefined
-    const userId: string = "userId_example"
-    const genreIds: string = "genreIds_example"
+    const isLiked: boolean = true
+    const isDisliked: boolean = true
+    const enableFavoriteSorting: boolean = true
+    const addCurrentProgram: boolean = true
+    const channelIds: string = "channelIds_example"
+    const artistType: string = "artistType_example"
+    const maxOfficialRating: string = "maxOfficialRating_example"
+    const hasThemeSong: boolean = true
+    const hasThemeVideo: boolean = true
+    const hasSubtitles: boolean = true
+    const hasSpecialFeature: boolean = true
+    const hasTrailer: boolean = true
+    const adjacentTo: string = "adjacentTo_example"
+    const minIndexNumber: number = 56
     const minStartDate: string = "minStartDate_example"
     const maxStartDate: string = "maxStartDate_example"
     const minEndDate: string = "minEndDate_example"
     const maxEndDate: string = "maxEndDate_example"
+    const minPlayers: number = 56
+    const maxPlayers: number = 56
+    const parentIndexNumber: number = 56
+    const hasParentalRating: boolean = true
+    const isHD: boolean = true
+    const isUnaired: boolean = true
+    const minCommunityRating: number = 1.2
+    const minCriticRating: number = 1.2
+    const airedDuringSeason: number = 56
+    const minPremiereDate: string = "minPremiereDate_example"
+    const minDateLastSaved: string = "minDateLastSaved_example"
+    const minDateLastSavedForUser: string = "minDateLastSavedForUser_example"
+    const maxPremiereDate: string = "maxPremiereDate_example"
+    const hasOverview: boolean = true
+    const hasImdbId: boolean = true
+    const hasTmdbId: boolean = true
+    const hasTvdbId: boolean = true
+    const excludeItemIds: string = "excludeItemIds_example"
     const startIndex: number = 56
+    const limit: number = 56
+    const recursive: boolean = true
+    const searchTerm: string = "searchTerm_example"
+    const sortOrder: string = "sortOrder_example"
+    const parentId: string = "parentId_example"
+    const fields: string = "fields_example"
+    const excludeItemTypes: string = "excludeItemTypes_example"
+    const includeItemTypes: string = "includeItemTypes_example"
+    const anyProviderIdEquals: string = "anyProviderIdEquals_example"
+    const filters: string = "filters_example"
+    const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
-    const limit: number = 56
-    const isFavorite: boolean = true
-    const isLiked: boolean = true
-    const isDisliked: boolean = true
-    const enableFavoriteSorting: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
+    const mediaTypes: string = "mediaTypes_example"
+    const imageTypes: string = "imageTypes_example"
+    const sortBy: string = "sortBy_example"
+    const isPlayed: boolean = true
+    const genres: string = "genres_example"
+    const officialRatings: string = "officialRatings_example"
+    const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
+    const years: string = "years_example"
     const enableImages: boolean = true
+    const enableUserData: boolean = true
     const imageTypeLimit: number = 56
     const enableImageTypes: string = "enableImageTypes_example"
-    const fields: string = "fields_example"
-    const addCurrentProgram: boolean = true
-    const enableUserData: boolean = true
-    const channelIds: string = "channelIds_example"
-    return expect(instance.getLivetvEPG(type, userId, genreIds, minStartDate, maxStartDate, minEndDate, maxEndDate, startIndex, isMovie, isSeries, isNews, isKids, isSports, limit, isFavorite, isLiked, isDisliked, enableFavoriteSorting, enableImages, imageTypeLimit, enableImageTypes, fields, addCurrentProgram, enableUserData, channelIds, {})).resolves.toBe(null)
+    const person: string = "person_example"
+    const personIds: string = "personIds_example"
+    const personTypes: string = "personTypes_example"
+    const studios: string = "studios_example"
+    const studioIds: string = "studioIds_example"
+    const artists: string = "artists_example"
+    const artistIds: string = "artistIds_example"
+    const albums: string = "albums_example"
+    const ids: string = "ids_example"
+    const videoTypes: string = "videoTypes_example"
+    const containers: string = "containers_example"
+    const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
+    const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
+    const subtitleCodecs: string = "subtitleCodecs_example"
+    const path: string = "path_example"
+    const userId: string = "userId_example"
+    const minOfficialRating: string = "minOfficialRating_example"
+    const isLocked: boolean = true
+    const isPlaceHolder: boolean = true
+    const hasOfficialRating: boolean = true
+    const groupItemsIntoCollections: boolean = true
+    const is3D: boolean = true
+    const seriesStatus: string = "seriesStatus_example"
+    const nameStartsWithOrGreater: string = "nameStartsWithOrGreater_example"
+    const artistStartsWithOrGreater: string = "artistStartsWithOrGreater_example"
+    const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
+    const nameStartsWith: string = "nameStartsWith_example"
+    const nameLessThan: string = "nameLessThan_example"
+    return expect(instance.getLivetvEPG(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getLivetvFolder", () => {
     return expect(instance.getLivetvFolder({})).resolves.toBe(null)
@@ -3137,15 +3422,6 @@ describe("LiveTvServiceApi", () => {
   test("getLivetvListingprovidersSchedulesdirectCountries", () => {
     return expect(instance.getLivetvListingprovidersSchedulesdirectCountries({})).resolves.toBe(null)
   })
-  test("getLivetvLiverecordingsByIdStream", () => {
-    const id: string = "id_example"
-    return expect(instance.getLivetvLiverecordingsByIdStream(id, {})).resolves.toBe(null)
-  })
-  test("getLivetvLivestreamfilesByIdStreamByContainer", () => {
-    const id: string = "id_example"
-    const container: string = "container_example"
-    return expect(instance.getLivetvLivestreamfilesByIdStreamByContainer(id, container, {})).resolves.toBe(null)
-  })
   test("getLivetvManageChannels", () => {
     const startIndex: number = 56
     const limit: number = 56
@@ -3155,28 +3431,104 @@ describe("LiveTvServiceApi", () => {
   })
   test("getLivetvPrograms", () => {
     const channelIds: string = "channelIds_example"
-    const userId: string = "userId_example"
-    const hasAired: boolean = true
+    const artistType: string = "artistType_example"
+    const maxOfficialRating: string = "maxOfficialRating_example"
+    const hasThemeSong: boolean = true
+    const hasThemeVideo: boolean = true
+    const hasSubtitles: boolean = true
+    const hasSpecialFeature: boolean = true
+    const hasTrailer: boolean = true
+    const adjacentTo: string = "adjacentTo_example"
+    const minIndexNumber: number = 56
     const minStartDate: string = "minStartDate_example"
     const maxStartDate: string = "maxStartDate_example"
     const minEndDate: string = "minEndDate_example"
     const maxEndDate: string = "maxEndDate_example"
+    const minPlayers: number = 56
+    const maxPlayers: number = 56
+    const parentIndexNumber: number = 56
+    const hasParentalRating: boolean = true
+    const isHD: boolean = true
+    const isUnaired: boolean = true
+    const minCommunityRating: number = 1.2
+    const minCriticRating: number = 1.2
+    const airedDuringSeason: number = 56
+    const minPremiereDate: string = "minPremiereDate_example"
+    const minDateLastSaved: string = "minDateLastSaved_example"
+    const minDateLastSavedForUser: string = "minDateLastSavedForUser_example"
+    const maxPremiereDate: string = "maxPremiereDate_example"
+    const hasOverview: boolean = true
+    const hasImdbId: boolean = true
+    const hasTmdbId: boolean = true
+    const hasTvdbId: boolean = true
+    const excludeItemIds: string = "excludeItemIds_example"
+    const startIndex: number = 56
+    const limit: number = 56
+    const recursive: boolean = true
+    const searchTerm: string = "searchTerm_example"
+    const sortOrder: string = "sortOrder_example"
+    const parentId: string = "parentId_example"
+    const fields: string = "fields_example"
+    const excludeItemTypes: string = "excludeItemTypes_example"
+    const includeItemTypes: string = "includeItemTypes_example"
+    const anyProviderIdEquals: string = "anyProviderIdEquals_example"
+    const filters: string = "filters_example"
+    const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
-    const startIndex: number = 56
-    const limit: number = 56
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
+    const mediaTypes: string = "mediaTypes_example"
+    const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
-    const sortOrder: string = "sortOrder_example"
-    const genreIds: string = "genreIds_example"
+    const isPlayed: boolean = true
+    const genres: string = "genres_example"
+    const officialRatings: string = "officialRatings_example"
+    const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
+    const years: string = "years_example"
     const enableImages: boolean = true
+    const enableUserData: boolean = true
     const imageTypeLimit: number = 56
     const enableImageTypes: string = "enableImageTypes_example"
-    const enableUserData: boolean = true
-    const fields: string = "fields_example"
-    return expect(instance.getLivetvPrograms(channelIds, userId, hasAired, minStartDate, maxStartDate, minEndDate, maxEndDate, isMovie, isSeries, isNews, isKids, isSports, startIndex, limit, sortBy, sortOrder, genreIds, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, {})).resolves.toBe(null)
+    const person: string = "person_example"
+    const personIds: string = "personIds_example"
+    const personTypes: string = "personTypes_example"
+    const studios: string = "studios_example"
+    const studioIds: string = "studioIds_example"
+    const artists: string = "artists_example"
+    const artistIds: string = "artistIds_example"
+    const albums: string = "albums_example"
+    const ids: string = "ids_example"
+    const videoTypes: string = "videoTypes_example"
+    const containers: string = "containers_example"
+    const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
+    const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
+    const subtitleCodecs: string = "subtitleCodecs_example"
+    const path: string = "path_example"
+    const userId: string = "userId_example"
+    const minOfficialRating: string = "minOfficialRating_example"
+    const isLocked: boolean = true
+    const isPlaceHolder: boolean = true
+    const hasOfficialRating: boolean = true
+    const groupItemsIntoCollections: boolean = true
+    const is3D: boolean = true
+    const seriesStatus: string = "seriesStatus_example"
+    const nameStartsWithOrGreater: string = "nameStartsWithOrGreater_example"
+    const artistStartsWithOrGreater: string = "artistStartsWithOrGreater_example"
+    const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
+    const nameStartsWith: string = "nameStartsWith_example"
+    const nameLessThan: string = "nameLessThan_example"
+    return expect(instance.getLivetvPrograms(channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getLivetvProgramsRecommended", () => {
     const userId: string = "userId_example"
@@ -3210,14 +3562,15 @@ describe("LiveTvServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -3245,9 +3598,15 @@ describe("LiveTvServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -3255,6 +3614,7 @@ describe("LiveTvServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -3272,7 +3632,9 @@ describe("LiveTvServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -3288,7 +3650,7 @@ describe("LiveTvServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getLivetvRecordings(channelId, status, isInProgress, seriesTimerId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getLivetvRecordings(channelId, status, isInProgress, seriesTimerId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getLivetvRecordingsById", () => {
     const id: string = "id_example"
@@ -3297,7 +3659,12 @@ describe("LiveTvServiceApi", () => {
   })
   test("getLivetvRecordingsFolders", () => {
     const userId: string = "userId_example"
-    return expect(instance.getLivetvRecordingsFolders(userId, {})).resolves.toBe(null)
+    const fields: string = "fields_example"
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    return expect(instance.getLivetvRecordingsFolders(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, {})).resolves.toBe(null)
   })
   test("getLivetvRecordingsGroups", () => {
     return expect(instance.getLivetvRecordingsGroups({})).resolves.toBe(null)
@@ -3355,7 +3722,7 @@ describe("LiveTvServiceApi", () => {
     return expect(instance.postLivetvChannelmappingoptions(providerId, {})).resolves.toBe(null)
   })
   test("postLivetvChannelmappings", () => {
-    const body: api.LiveTVApiSetChannelMapping = undefined
+    const body: api.ApiSetChannelMapping = undefined
     const providerId: string = "providerId_example"
     return expect(instance.postLivetvChannelmappings(body, providerId, {})).resolves.toBe(null)
   })
@@ -3368,40 +3735,116 @@ describe("LiveTvServiceApi", () => {
     return expect(instance.postLivetvListingprovidersDelete(id, {})).resolves.toBe(null)
   })
   test("postLivetvManageChannelsByIdDisabled", () => {
-    const body: api.LiveTVApiSetChannelDisabled = undefined
+    const body: api.ApiSetChannelDisabled = undefined
     const id: string = "id_example"
     return expect(instance.postLivetvManageChannelsByIdDisabled(body, id, {})).resolves.toBe(null)
   })
   test("postLivetvManageChannelsByIdSortindex", () => {
-    const body: api.LiveTVApiSetChannelSortIndex = undefined
+    const body: api.ApiSetChannelSortIndex = undefined
     const id: string = "id_example"
     return expect(instance.postLivetvManageChannelsByIdSortindex(body, id, {})).resolves.toBe(null)
   })
   test("postLivetvPrograms", () => {
-    const body: api.LiveTVApiGetPrograms = undefined
+    const body: api.ApiBaseItemsRequest = undefined
     const channelIds: string = "channelIds_example"
-    const userId: string = "userId_example"
-    const hasAired: boolean = true
+    const artistType: string = "artistType_example"
+    const maxOfficialRating: string = "maxOfficialRating_example"
+    const hasThemeSong: boolean = true
+    const hasThemeVideo: boolean = true
+    const hasSubtitles: boolean = true
+    const hasSpecialFeature: boolean = true
+    const hasTrailer: boolean = true
+    const adjacentTo: string = "adjacentTo_example"
+    const minIndexNumber: number = 56
     const minStartDate: string = "minStartDate_example"
     const maxStartDate: string = "maxStartDate_example"
     const minEndDate: string = "minEndDate_example"
     const maxEndDate: string = "maxEndDate_example"
+    const minPlayers: number = 56
+    const maxPlayers: number = 56
+    const parentIndexNumber: number = 56
+    const hasParentalRating: boolean = true
+    const isHD: boolean = true
+    const isUnaired: boolean = true
+    const minCommunityRating: number = 1.2
+    const minCriticRating: number = 1.2
+    const airedDuringSeason: number = 56
+    const minPremiereDate: string = "minPremiereDate_example"
+    const minDateLastSaved: string = "minDateLastSaved_example"
+    const minDateLastSavedForUser: string = "minDateLastSavedForUser_example"
+    const maxPremiereDate: string = "maxPremiereDate_example"
+    const hasOverview: boolean = true
+    const hasImdbId: boolean = true
+    const hasTmdbId: boolean = true
+    const hasTvdbId: boolean = true
+    const excludeItemIds: string = "excludeItemIds_example"
+    const startIndex: number = 56
+    const limit: number = 56
+    const recursive: boolean = true
+    const searchTerm: string = "searchTerm_example"
+    const sortOrder: string = "sortOrder_example"
+    const parentId: string = "parentId_example"
+    const fields: string = "fields_example"
+    const excludeItemTypes: string = "excludeItemTypes_example"
+    const includeItemTypes: string = "includeItemTypes_example"
+    const anyProviderIdEquals: string = "anyProviderIdEquals_example"
+    const filters: string = "filters_example"
+    const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
-    const startIndex: number = 56
-    const limit: number = 56
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
+    const mediaTypes: string = "mediaTypes_example"
+    const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
-    const sortOrder: string = "sortOrder_example"
-    const genreIds: string = "genreIds_example"
+    const isPlayed: boolean = true
+    const genres: string = "genres_example"
+    const officialRatings: string = "officialRatings_example"
+    const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
+    const years: string = "years_example"
     const enableImages: boolean = true
+    const enableUserData: boolean = true
     const imageTypeLimit: number = 56
     const enableImageTypes: string = "enableImageTypes_example"
-    const enableUserData: boolean = true
-    const fields: string = "fields_example"
-    return expect(instance.postLivetvPrograms(body, channelIds, userId, hasAired, minStartDate, maxStartDate, minEndDate, maxEndDate, isMovie, isSeries, isNews, isKids, isSports, startIndex, limit, sortBy, sortOrder, genreIds, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields, {})).resolves.toBe(null)
+    const person: string = "person_example"
+    const personIds: string = "personIds_example"
+    const personTypes: string = "personTypes_example"
+    const studios: string = "studios_example"
+    const studioIds: string = "studioIds_example"
+    const artists: string = "artists_example"
+    const artistIds: string = "artistIds_example"
+    const albums: string = "albums_example"
+    const ids: string = "ids_example"
+    const videoTypes: string = "videoTypes_example"
+    const containers: string = "containers_example"
+    const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
+    const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
+    const subtitleCodecs: string = "subtitleCodecs_example"
+    const path: string = "path_example"
+    const userId: string = "userId_example"
+    const minOfficialRating: string = "minOfficialRating_example"
+    const isLocked: boolean = true
+    const isPlaceHolder: boolean = true
+    const hasOfficialRating: boolean = true
+    const groupItemsIntoCollections: boolean = true
+    const is3D: boolean = true
+    const seriesStatus: string = "seriesStatus_example"
+    const nameStartsWithOrGreater: string = "nameStartsWithOrGreater_example"
+    const artistStartsWithOrGreater: string = "artistStartsWithOrGreater_example"
+    const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
+    const nameStartsWith: string = "nameStartsWith_example"
+    const nameLessThan: string = "nameLessThan_example"
+    return expect(instance.postLivetvPrograms(body, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("postLivetvRecordingsByIdDelete", () => {
     const id: string = "id_example"
@@ -3450,7 +3893,7 @@ describe("LiveTvServiceApi", () => {
     return expect(instance.putLivetvChannelmappingoptions(providerId, {})).resolves.toBe(null)
   })
   test("putLivetvChannelmappings", () => {
-    const body: api.LiveTVApiSetChannelMapping = undefined
+    const body: api.ApiSetChannelMapping = undefined
     const providerId: string = "providerId_example"
     return expect(instance.putLivetvChannelmappings(body, providerId, {})).resolves.toBe(null)
   })
@@ -3492,7 +3935,7 @@ describe("MediaInfoServiceApi", () => {
     return expect(instance.getPlaybackBitratetest(size, {})).resolves.toBe(null)
   })
   test("postItemsByIdPlaybackinfo", () => {
-    const body: api.MediaInfoPlaybackInfoRequest = undefined
+    const body: api.PlaybackInfoRequest = undefined
     const id: string = "id_example"
     return expect(instance.postItemsByIdPlaybackinfo(body, id, {})).resolves.toBe(null)
   })
@@ -3505,7 +3948,7 @@ describe("MediaInfoServiceApi", () => {
     return expect(instance.postLivestreamsMediainfo(liveStreamId, {})).resolves.toBe(null)
   })
   test("postLivestreamsOpen", () => {
-    const body: api.MediaInfoLiveStreamRequest = undefined
+    const body: api.LiveStreamRequest = undefined
     return expect(instance.postLivestreamsOpen(body, {})).resolves.toBe(null)
   })
 })
@@ -3545,14 +3988,15 @@ describe("MusicGenresServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -3580,9 +4024,15 @@ describe("MusicGenresServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -3590,6 +4040,7 @@ describe("MusicGenresServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -3607,7 +4058,9 @@ describe("MusicGenresServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -3623,7 +4076,7 @@ describe("MusicGenresServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getMusicgenres(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getMusicgenres(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getMusicgenresByName", () => {
     const name: string = "name_example"
@@ -3638,20 +4091,6 @@ describe("NotificationsServiceApi", () => {
     instance = new api.NotificationsServiceApi(config)
   });
 
-  test("getNotificationsByUserid", () => {
-    const userId: string = "userId_example"
-    const isRead: boolean = true
-    const startIndex: number = 56
-    const limit: number = 56
-    return expect(instance.getNotificationsByUserid(userId, isRead, startIndex, limit, {})).resolves.toBe(null)
-  })
-  test("getNotificationsByUseridSummary", () => {
-    const userId: string = "userId_example"
-    return expect(instance.getNotificationsByUseridSummary(userId, {})).resolves.toBe(null)
-  })
-  test("getNotificationsServices", () => {
-    return expect(instance.getNotificationsServices({})).resolves.toBe(null)
-  })
   test("getNotificationsTypes", () => {
     return expect(instance.getNotificationsTypes({})).resolves.toBe(null)
   })
@@ -3660,18 +4099,8 @@ describe("NotificationsServiceApi", () => {
     const description: string = "description_example"
     const imageUrl: string = "imageUrl_example"
     const url: string = "url_example"
-    const level: NotificationsNotificationLevel = undefined
+    const level: string = "level_example"
     return expect(instance.postNotificationsAdmin(name, description, imageUrl, url, level, {})).resolves.toBe(null)
-  })
-  test("postNotificationsByUseridRead", () => {
-    const userId: string = "userId_example"
-    const ids: string = "ids_example"
-    return expect(instance.postNotificationsByUseridRead(userId, ids, {})).resolves.toBe(null)
-  })
-  test("postNotificationsByUseridUnread", () => {
-    const userId: string = "userId_example"
-    const ids: string = "ids_example"
-    return expect(instance.postNotificationsByUseridUnread(userId, ids, {})).resolves.toBe(null)
   })
 })
 
@@ -3691,14 +4120,15 @@ describe("OfficialRatingServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -3726,9 +4156,15 @@ describe("OfficialRatingServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -3736,6 +4172,7 @@ describe("OfficialRatingServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -3753,7 +4190,9 @@ describe("OfficialRatingServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -3769,7 +4208,7 @@ describe("OfficialRatingServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getOfficialratings(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getOfficialratings(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
 })
 
@@ -3823,7 +4262,7 @@ describe("PackageServiceApi", () => {
     const name: string = "name_example"
     const assemblyGuid: string = "assemblyGuid_example"
     const version: string = "version_example"
-    const updateClass: UpdatesPackageVersionClass = undefined
+    const updateClass: PackageVersionClass = undefined
     return expect(instance.postPackagesInstalledByName(name, assemblyGuid, version, updateClass, {})).resolves.toBe(null)
   })
   test("postPackagesInstallingByIdDelete", () => {
@@ -3848,14 +4287,15 @@ describe("PersonsServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -3883,9 +4323,15 @@ describe("PersonsServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -3893,6 +4339,7 @@ describe("PersonsServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -3910,7 +4357,9 @@ describe("PersonsServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -3926,7 +4375,7 @@ describe("PersonsServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getPersons(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getPersons(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getPersonsByName", () => {
     const name: string = "name_example"
@@ -3945,6 +4394,12 @@ describe("PlaylistServiceApi", () => {
     const id: string = "id_example"
     const entryIds: string = "entryIds_example"
     return expect(instance.deletePlaylistsByIdItems(id, entryIds, {})).resolves.toBe(null)
+  })
+  test("getPlaylistsByIdAddtoplaylistinfo", () => {
+    const ids: string = "ids_example"
+    const id: string = "id_example"
+    const userId: string = "userId_example"
+    return expect(instance.getPlaylistsByIdAddtoplaylistinfo(ids, id, userId, {})).resolves.toBe(null)
   })
   test("getPlaylistsByIdItems", () => {
     const id: string = "id_example"
@@ -4060,7 +4515,7 @@ describe("PlaystateServiceApi", () => {
     return expect(instance.postUsersByUseridPlayingitemsByIdDelete(userId, id, mediaSourceId, nextMediaType, positionTicks, liveStreamId, playSessionId, {})).resolves.toBe(null)
   })
   test("postUsersByUseridPlayingitemsByIdProgress", () => {
-    const body: api.MediaEncodingApiOnPlaybackProgress = undefined
+    const body: api.ApiOnPlaybackProgress = undefined
     const mediaSourceId: string = "mediaSourceId_example"
     const userId: string = "userId_example"
     const id: string = "id_example"
@@ -4164,7 +4619,7 @@ describe("ScheduledTaskServiceApi", () => {
     return expect(instance.getScheduledtasksById(id, {})).resolves.toBe(null)
   })
   test("postScheduledtasksByIdTriggers", () => {
-    const body: Array<api.TasksTaskTriggerInfo> = undefined
+    const body: Array<api.TaskTriggerInfo> = undefined
     const id: string = "id_example"
     return expect(instance.postScheduledtasksByIdTriggers(body, id, {})).resolves.toBe(null)
   })
@@ -4307,14 +4762,15 @@ describe("StudiosServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -4342,9 +4798,15 @@ describe("StudiosServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -4352,6 +4814,7 @@ describe("StudiosServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -4369,7 +4832,9 @@ describe("StudiosServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -4385,7 +4850,7 @@ describe("StudiosServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getStudios(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getStudios(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getStudiosByName", () => {
     const name: string = "name_example"
@@ -4453,7 +4918,8 @@ describe("SubtitleServiceApi", () => {
     const language: string = "language_example"
     const isPerfectMatch: boolean = true
     const isForced: boolean = true
-    return expect(instance.getItemsByIdRemotesearchSubtitlesByLanguage(id, mediaSourceId, language, isPerfectMatch, isForced, {})).resolves.toBe(null)
+    const isHearingImpaired: boolean = true
+    return expect(instance.getItemsByIdRemotesearchSubtitlesByLanguage(id, mediaSourceId, language, isPerfectMatch, isForced, isHearingImpaired, {})).resolves.toBe(null)
   })
   test("getProvidersSubtitlesSubtitlesById", () => {
     const id: string = "id_example"
@@ -4507,7 +4973,12 @@ describe("SuggestionsServiceApi", () => {
 
   test("getUsersByUseridSuggestions", () => {
     const userId: string = "userId_example"
-    return expect(instance.getUsersByUseridSuggestions(userId, {})).resolves.toBe(null)
+    const fields: string = "fields_example"
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    return expect(instance.getUsersByUseridSuggestions(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, {})).resolves.toBe(null)
   })
 })
 
@@ -4535,7 +5006,8 @@ describe("SyncServiceApi", () => {
     return expect(instance.getSyncItemsReady(targetId, {})).resolves.toBe(null)
   })
   test("getSyncJobitems", () => {
-    return expect(instance.getSyncJobitems({})).resolves.toBe(null)
+    const targetId: string = "targetId_example"
+    return expect(instance.getSyncJobitems(targetId, {})).resolves.toBe(null)
   })
   test("getSyncJobitemsByIdAdditionalfiles", () => {
     const id: string = "id_example"
@@ -4558,7 +5030,7 @@ describe("SyncServiceApi", () => {
     const itemIds: string = "itemIds_example"
     const parentId: string = "parentId_example"
     const targetId: string = "targetId_example"
-    const category: SyncSyncCategory = undefined
+    const category: SyncCategory = undefined
     return expect(instance.getSyncOptions(userId, itemIds, parentId, targetId, category, {})).resolves.toBe(null)
   })
   test("getSyncTargets", () => {
@@ -4566,7 +5038,7 @@ describe("SyncServiceApi", () => {
     return expect(instance.getSyncTargets(userId, {})).resolves.toBe(null)
   })
   test("postSyncByItemidStatus", () => {
-    const body: api.SyncModelSyncedItemProgress = undefined
+    const body: api.SyncedItemProgress = undefined
     const itemId: string = "itemId_example"
     return expect(instance.postSyncByItemidStatus(body, itemId, {})).resolves.toBe(null)
   })
@@ -4576,8 +5048,9 @@ describe("SyncServiceApi", () => {
     return expect(instance.postSyncByTargetidItemsDelete(targetId, itemIds, {})).resolves.toBe(null)
   })
   test("postSyncData", () => {
-    const body: api.SyncModelSyncDataRequest = undefined
-    return expect(instance.postSyncData(body, {})).resolves.toBe(null)
+    const body: api.SyncDataRequest = undefined
+    const targetId: string = "targetId_example"
+    return expect(instance.postSyncData(body, targetId, {})).resolves.toBe(null)
   })
   test("postSyncItemsCancel", () => {
     const itemIds: string = "itemIds_example"
@@ -4604,11 +5077,11 @@ describe("SyncServiceApi", () => {
     return expect(instance.postSyncJobitemsByIdUnmarkforremoval(id, {})).resolves.toBe(null)
   })
   test("postSyncJobs", () => {
-    const body: api.SyncModelSyncJobRequest = undefined
+    const body: api.SyncJobRequest = undefined
     return expect(instance.postSyncJobs(body, {})).resolves.toBe(null)
   })
   test("postSyncJobsById", () => {
-    const body: api.SyncSyncJob = undefined
+    const body: api.SyncJob = undefined
     const id: number = 789
     return expect(instance.postSyncJobsById(body, id, {})).resolves.toBe(null)
   })
@@ -4617,7 +5090,7 @@ describe("SyncServiceApi", () => {
     return expect(instance.postSyncJobsByIdDelete(id, {})).resolves.toBe(null)
   })
   test("postSyncOfflineactions", () => {
-    const body: Array<api.UsersUserAction> = undefined
+    const body: Array<api.UserAction> = undefined
     return expect(instance.postSyncOfflineactions(body, {})).resolves.toBe(null)
   })
 })
@@ -4690,14 +5163,15 @@ describe("TagServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -4725,9 +5199,15 @@ describe("TagServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -4735,6 +5215,7 @@ describe("TagServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -4752,7 +5233,9 @@ describe("TagServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -4768,7 +5251,7 @@ describe("TagServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getArtistsPrefixes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getArtistsPrefixes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getAudiocodecs", () => {
     const artistType: string = "artistType_example"
@@ -4780,14 +5263,15 @@ describe("TagServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -4815,9 +5299,15 @@ describe("TagServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -4825,6 +5315,7 @@ describe("TagServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -4842,7 +5333,9 @@ describe("TagServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -4858,7 +5351,107 @@ describe("TagServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getAudiocodecs(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getAudiocodecs(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+  })
+  test("getAudiolayouts", () => {
+    const artistType: string = "artistType_example"
+    const maxOfficialRating: string = "maxOfficialRating_example"
+    const hasThemeSong: boolean = true
+    const hasThemeVideo: boolean = true
+    const hasSubtitles: boolean = true
+    const hasSpecialFeature: boolean = true
+    const hasTrailer: boolean = true
+    const adjacentTo: string = "adjacentTo_example"
+    const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
+    const minPlayers: number = 56
+    const maxPlayers: number = 56
+    const parentIndexNumber: number = 56
+    const hasParentalRating: boolean = true
+    const isHD: boolean = true
+    const isUnaired: boolean = true
+    const minCommunityRating: number = 1.2
+    const minCriticRating: number = 1.2
+    const airedDuringSeason: number = 56
+    const minPremiereDate: string = "minPremiereDate_example"
+    const minDateLastSaved: string = "minDateLastSaved_example"
+    const minDateLastSavedForUser: string = "minDateLastSavedForUser_example"
+    const maxPremiereDate: string = "maxPremiereDate_example"
+    const hasOverview: boolean = true
+    const hasImdbId: boolean = true
+    const hasTmdbId: boolean = true
+    const hasTvdbId: boolean = true
+    const excludeItemIds: string = "excludeItemIds_example"
+    const startIndex: number = 56
+    const limit: number = 56
+    const recursive: boolean = true
+    const searchTerm: string = "searchTerm_example"
+    const sortOrder: string = "sortOrder_example"
+    const parentId: string = "parentId_example"
+    const fields: string = "fields_example"
+    const excludeItemTypes: string = "excludeItemTypes_example"
+    const includeItemTypes: string = "includeItemTypes_example"
+    const anyProviderIdEquals: string = "anyProviderIdEquals_example"
+    const filters: string = "filters_example"
+    const isFavorite: boolean = true
+    const isMovie: boolean = true
+    const isSeries: boolean = true
+    const isFolder: boolean = true
+    const isNews: boolean = true
+    const isKids: boolean = true
+    const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
+    const mediaTypes: string = "mediaTypes_example"
+    const imageTypes: string = "imageTypes_example"
+    const sortBy: string = "sortBy_example"
+    const isPlayed: boolean = true
+    const genres: string = "genres_example"
+    const officialRatings: string = "officialRatings_example"
+    const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
+    const years: string = "years_example"
+    const enableImages: boolean = true
+    const enableUserData: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const person: string = "person_example"
+    const personIds: string = "personIds_example"
+    const personTypes: string = "personTypes_example"
+    const studios: string = "studios_example"
+    const studioIds: string = "studioIds_example"
+    const artists: string = "artists_example"
+    const artistIds: string = "artistIds_example"
+    const albums: string = "albums_example"
+    const ids: string = "ids_example"
+    const videoTypes: string = "videoTypes_example"
+    const containers: string = "containers_example"
+    const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
+    const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
+    const subtitleCodecs: string = "subtitleCodecs_example"
+    const path: string = "path_example"
+    const userId: string = "userId_example"
+    const minOfficialRating: string = "minOfficialRating_example"
+    const isLocked: boolean = true
+    const isPlaceHolder: boolean = true
+    const hasOfficialRating: boolean = true
+    const groupItemsIntoCollections: boolean = true
+    const is3D: boolean = true
+    const seriesStatus: string = "seriesStatus_example"
+    const nameStartsWithOrGreater: string = "nameStartsWithOrGreater_example"
+    const artistStartsWithOrGreater: string = "artistStartsWithOrGreater_example"
+    const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
+    const nameStartsWith: string = "nameStartsWith_example"
+    const nameLessThan: string = "nameLessThan_example"
+    return expect(instance.getAudiolayouts(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getContainers", () => {
     const artistType: string = "artistType_example"
@@ -4870,14 +5463,15 @@ describe("TagServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -4905,9 +5499,15 @@ describe("TagServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -4915,6 +5515,7 @@ describe("TagServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -4932,7 +5533,9 @@ describe("TagServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -4948,7 +5551,107 @@ describe("TagServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getContainers(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getContainers(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+  })
+  test("getExtendedvideotypes", () => {
+    const artistType: string = "artistType_example"
+    const maxOfficialRating: string = "maxOfficialRating_example"
+    const hasThemeSong: boolean = true
+    const hasThemeVideo: boolean = true
+    const hasSubtitles: boolean = true
+    const hasSpecialFeature: boolean = true
+    const hasTrailer: boolean = true
+    const adjacentTo: string = "adjacentTo_example"
+    const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
+    const minPlayers: number = 56
+    const maxPlayers: number = 56
+    const parentIndexNumber: number = 56
+    const hasParentalRating: boolean = true
+    const isHD: boolean = true
+    const isUnaired: boolean = true
+    const minCommunityRating: number = 1.2
+    const minCriticRating: number = 1.2
+    const airedDuringSeason: number = 56
+    const minPremiereDate: string = "minPremiereDate_example"
+    const minDateLastSaved: string = "minDateLastSaved_example"
+    const minDateLastSavedForUser: string = "minDateLastSavedForUser_example"
+    const maxPremiereDate: string = "maxPremiereDate_example"
+    const hasOverview: boolean = true
+    const hasImdbId: boolean = true
+    const hasTmdbId: boolean = true
+    const hasTvdbId: boolean = true
+    const excludeItemIds: string = "excludeItemIds_example"
+    const startIndex: number = 56
+    const limit: number = 56
+    const recursive: boolean = true
+    const searchTerm: string = "searchTerm_example"
+    const sortOrder: string = "sortOrder_example"
+    const parentId: string = "parentId_example"
+    const fields: string = "fields_example"
+    const excludeItemTypes: string = "excludeItemTypes_example"
+    const includeItemTypes: string = "includeItemTypes_example"
+    const anyProviderIdEquals: string = "anyProviderIdEquals_example"
+    const filters: string = "filters_example"
+    const isFavorite: boolean = true
+    const isMovie: boolean = true
+    const isSeries: boolean = true
+    const isFolder: boolean = true
+    const isNews: boolean = true
+    const isKids: boolean = true
+    const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
+    const mediaTypes: string = "mediaTypes_example"
+    const imageTypes: string = "imageTypes_example"
+    const sortBy: string = "sortBy_example"
+    const isPlayed: boolean = true
+    const genres: string = "genres_example"
+    const officialRatings: string = "officialRatings_example"
+    const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
+    const years: string = "years_example"
+    const enableImages: boolean = true
+    const enableUserData: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const person: string = "person_example"
+    const personIds: string = "personIds_example"
+    const personTypes: string = "personTypes_example"
+    const studios: string = "studios_example"
+    const studioIds: string = "studioIds_example"
+    const artists: string = "artists_example"
+    const artistIds: string = "artistIds_example"
+    const albums: string = "albums_example"
+    const ids: string = "ids_example"
+    const videoTypes: string = "videoTypes_example"
+    const containers: string = "containers_example"
+    const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
+    const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
+    const subtitleCodecs: string = "subtitleCodecs_example"
+    const path: string = "path_example"
+    const userId: string = "userId_example"
+    const minOfficialRating: string = "minOfficialRating_example"
+    const isLocked: boolean = true
+    const isPlaceHolder: boolean = true
+    const hasOfficialRating: boolean = true
+    const groupItemsIntoCollections: boolean = true
+    const is3D: boolean = true
+    const seriesStatus: string = "seriesStatus_example"
+    const nameStartsWithOrGreater: string = "nameStartsWithOrGreater_example"
+    const artistStartsWithOrGreater: string = "artistStartsWithOrGreater_example"
+    const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
+    const nameStartsWith: string = "nameStartsWith_example"
+    const nameLessThan: string = "nameLessThan_example"
+    return expect(instance.getExtendedvideotypes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getItemsPrefixes", () => {
     const artistType: string = "artistType_example"
@@ -4960,14 +5663,15 @@ describe("TagServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -4995,9 +5699,15 @@ describe("TagServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -5005,6 +5715,7 @@ describe("TagServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -5022,7 +5733,9 @@ describe("TagServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -5038,7 +5751,7 @@ describe("TagServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getItemsPrefixes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getItemsPrefixes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getItemtypes", () => {
     const artistType: string = "artistType_example"
@@ -5050,14 +5763,15 @@ describe("TagServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -5085,9 +5799,15 @@ describe("TagServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -5095,6 +5815,7 @@ describe("TagServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -5112,7 +5833,9 @@ describe("TagServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -5128,7 +5851,7 @@ describe("TagServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getItemtypes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getItemtypes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getStreamlanguages", () => {
     const artistType: string = "artistType_example"
@@ -5140,14 +5863,15 @@ describe("TagServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -5175,9 +5899,15 @@ describe("TagServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -5185,6 +5915,7 @@ describe("TagServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -5202,7 +5933,9 @@ describe("TagServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -5218,7 +5951,7 @@ describe("TagServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getStreamlanguages(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getStreamlanguages(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getSubtitlecodecs", () => {
     const artistType: string = "artistType_example"
@@ -5230,14 +5963,15 @@ describe("TagServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -5265,9 +5999,15 @@ describe("TagServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -5275,6 +6015,7 @@ describe("TagServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -5292,7 +6033,9 @@ describe("TagServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -5308,7 +6051,7 @@ describe("TagServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getSubtitlecodecs(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getSubtitlecodecs(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getTags", () => {
     const artistType: string = "artistType_example"
@@ -5320,14 +6063,15 @@ describe("TagServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -5355,9 +6099,15 @@ describe("TagServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -5365,6 +6115,7 @@ describe("TagServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -5382,7 +6133,9 @@ describe("TagServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -5398,7 +6151,7 @@ describe("TagServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getTags(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getTags(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getVideocodecs", () => {
     const artistType: string = "artistType_example"
@@ -5410,14 +6163,15 @@ describe("TagServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -5445,9 +6199,15 @@ describe("TagServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -5455,6 +6215,7 @@ describe("TagServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -5472,7 +6233,9 @@ describe("TagServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -5488,7 +6251,7 @@ describe("TagServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getVideocodecs(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getVideocodecs(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getYears", () => {
     const artistType: string = "artistType_example"
@@ -5500,14 +6263,15 @@ describe("TagServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -5535,9 +6299,15 @@ describe("TagServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -5545,6 +6315,7 @@ describe("TagServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -5562,7 +6333,9 @@ describe("TagServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -5578,12 +6351,17 @@ describe("TagServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getYears(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getYears(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("postItemsByIdTagsAdd", () => {
     const body: api.UserLibraryAddTags = undefined
     const id: string = "id_example"
     return expect(instance.postItemsByIdTagsAdd(body, id, {})).resolves.toBe(null)
+  })
+  test("postItemsByIdTagsDelete", () => {
+    const body: api.UserLibraryRemoveTags = undefined
+    const id: string = "id_example"
+    return expect(instance.postItemsByIdTagsDelete(body, id, {})).resolves.toBe(null)
   })
 })
 
@@ -5625,14 +6403,15 @@ describe("TrailersServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -5660,9 +6439,15 @@ describe("TrailersServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -5670,6 +6455,7 @@ describe("TrailersServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -5687,7 +6473,9 @@ describe("TrailersServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -5703,7 +6491,7 @@ describe("TrailersServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getTrailers(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getTrailers(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
 })
 
@@ -5727,14 +6515,15 @@ describe("TvShowsServiceApi", () => {
     const hasTrailer: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
     const minPlayers: number = 56
     const maxPlayers: number = 56
     const parentIndexNumber: number = 56
     const hasParentalRating: boolean = true
     const isHD: boolean = true
-    const locationTypes: string = "locationTypes_example"
-    const excludeLocationTypes: string = "excludeLocationTypes_example"
-    const isMissing: boolean = true
     const isUnaired: boolean = true
     const minCommunityRating: number = 1.2
     const minCriticRating: number = 1.2
@@ -5762,9 +6551,15 @@ describe("TvShowsServiceApi", () => {
     const isFavorite: boolean = true
     const isMovie: boolean = true
     const isSeries: boolean = true
+    const isFolder: boolean = true
     const isNews: boolean = true
     const isKids: boolean = true
     const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
     const mediaTypes: string = "mediaTypes_example"
     const imageTypes: string = "imageTypes_example"
     const sortBy: string = "sortBy_example"
@@ -5772,6 +6567,7 @@ describe("TvShowsServiceApi", () => {
     const genres: string = "genres_example"
     const officialRatings: string = "officialRatings_example"
     const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
     const years: string = "years_example"
     const enableImages: boolean = true
     const enableUserData: boolean = true
@@ -5789,7 +6585,9 @@ describe("TvShowsServiceApi", () => {
     const videoTypes: string = "videoTypes_example"
     const containers: string = "containers_example"
     const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
     const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
     const subtitleCodecs: string = "subtitleCodecs_example"
     const path: string = "path_example"
     const userId: string = "userId_example"
@@ -5805,20 +6603,119 @@ describe("TvShowsServiceApi", () => {
     const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
     const nameStartsWith: string = "nameStartsWith_example"
     const nameLessThan: string = "nameLessThan_example"
-    return expect(instance.getShowsByIdEpisodes(id, season, seasonId, startItemId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
+    return expect(instance.getShowsByIdEpisodes(id, season, seasonId, startItemId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getShowsByIdSeasons", () => {
     const userId: string = "userId_example"
     const id: string = "id_example"
     const fields: string = "fields_example"
     const isSpecialSeason: boolean = true
-    const isMissing: boolean = true
     const adjacentTo: string = "adjacentTo_example"
     const enableImages: boolean = true
     const imageTypeLimit: number = 56
     const enableImageTypes: string = "enableImageTypes_example"
     const enableUserData: boolean = true
-    return expect(instance.getShowsByIdSeasons(userId, id, fields, isSpecialSeason, isMissing, adjacentTo, enableImages, imageTypeLimit, enableImageTypes, enableUserData, {})).resolves.toBe(null)
+    return expect(instance.getShowsByIdSeasons(userId, id, fields, isSpecialSeason, adjacentTo, enableImages, imageTypeLimit, enableImageTypes, enableUserData, {})).resolves.toBe(null)
+  })
+  test("getShowsMissing", () => {
+    const artistType: string = "artistType_example"
+    const maxOfficialRating: string = "maxOfficialRating_example"
+    const hasThemeSong: boolean = true
+    const hasThemeVideo: boolean = true
+    const hasSubtitles: boolean = true
+    const hasSpecialFeature: boolean = true
+    const hasTrailer: boolean = true
+    const adjacentTo: string = "adjacentTo_example"
+    const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
+    const minPlayers: number = 56
+    const maxPlayers: number = 56
+    const parentIndexNumber: number = 56
+    const hasParentalRating: boolean = true
+    const isHD: boolean = true
+    const isUnaired: boolean = true
+    const minCommunityRating: number = 1.2
+    const minCriticRating: number = 1.2
+    const airedDuringSeason: number = 56
+    const minPremiereDate: string = "minPremiereDate_example"
+    const minDateLastSaved: string = "minDateLastSaved_example"
+    const minDateLastSavedForUser: string = "minDateLastSavedForUser_example"
+    const maxPremiereDate: string = "maxPremiereDate_example"
+    const hasOverview: boolean = true
+    const hasImdbId: boolean = true
+    const hasTmdbId: boolean = true
+    const hasTvdbId: boolean = true
+    const excludeItemIds: string = "excludeItemIds_example"
+    const startIndex: number = 56
+    const limit: number = 56
+    const recursive: boolean = true
+    const searchTerm: string = "searchTerm_example"
+    const sortOrder: string = "sortOrder_example"
+    const parentId: string = "parentId_example"
+    const fields: string = "fields_example"
+    const excludeItemTypes: string = "excludeItemTypes_example"
+    const includeItemTypes: string = "includeItemTypes_example"
+    const anyProviderIdEquals: string = "anyProviderIdEquals_example"
+    const filters: string = "filters_example"
+    const isFavorite: boolean = true
+    const isMovie: boolean = true
+    const isSeries: boolean = true
+    const isFolder: boolean = true
+    const isNews: boolean = true
+    const isKids: boolean = true
+    const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
+    const mediaTypes: string = "mediaTypes_example"
+    const imageTypes: string = "imageTypes_example"
+    const sortBy: string = "sortBy_example"
+    const isPlayed: boolean = true
+    const genres: string = "genres_example"
+    const officialRatings: string = "officialRatings_example"
+    const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
+    const years: string = "years_example"
+    const enableImages: boolean = true
+    const enableUserData: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const person: string = "person_example"
+    const personIds: string = "personIds_example"
+    const personTypes: string = "personTypes_example"
+    const studios: string = "studios_example"
+    const studioIds: string = "studioIds_example"
+    const artists: string = "artists_example"
+    const artistIds: string = "artistIds_example"
+    const albums: string = "albums_example"
+    const ids: string = "ids_example"
+    const videoTypes: string = "videoTypes_example"
+    const containers: string = "containers_example"
+    const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
+    const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
+    const subtitleCodecs: string = "subtitleCodecs_example"
+    const path: string = "path_example"
+    const userId: string = "userId_example"
+    const minOfficialRating: string = "minOfficialRating_example"
+    const isLocked: boolean = true
+    const isPlaceHolder: boolean = true
+    const hasOfficialRating: boolean = true
+    const groupItemsIntoCollections: boolean = true
+    const is3D: boolean = true
+    const seriesStatus: string = "seriesStatus_example"
+    const nameStartsWithOrGreater: string = "nameStartsWithOrGreater_example"
+    const artistStartsWithOrGreater: string = "artistStartsWithOrGreater_example"
+    const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
+    const nameStartsWith: string = "nameStartsWith_example"
+    const nameLessThan: string = "nameLessThan_example"
+    return expect(instance.getShowsMissing(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
   test("getShowsNextup", () => {
     const userId: string = "userId_example"
@@ -5834,16 +6731,104 @@ describe("TvShowsServiceApi", () => {
     return expect(instance.getShowsNextup(userId, startIndex, limit, fields, seriesId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData, {})).resolves.toBe(null)
   })
   test("getShowsUpcoming", () => {
-    const userId: string = "userId_example"
+    const artistType: string = "artistType_example"
+    const maxOfficialRating: string = "maxOfficialRating_example"
+    const hasThemeSong: boolean = true
+    const hasThemeVideo: boolean = true
+    const hasSubtitles: boolean = true
+    const hasSpecialFeature: boolean = true
+    const hasTrailer: boolean = true
+    const adjacentTo: string = "adjacentTo_example"
+    const minIndexNumber: number = 56
+    const minStartDate: string = "minStartDate_example"
+    const maxStartDate: string = "maxStartDate_example"
+    const minEndDate: string = "minEndDate_example"
+    const maxEndDate: string = "maxEndDate_example"
+    const minPlayers: number = 56
+    const maxPlayers: number = 56
+    const parentIndexNumber: number = 56
+    const hasParentalRating: boolean = true
+    const isHD: boolean = true
+    const isUnaired: boolean = true
+    const minCommunityRating: number = 1.2
+    const minCriticRating: number = 1.2
+    const airedDuringSeason: number = 56
+    const minPremiereDate: string = "minPremiereDate_example"
+    const minDateLastSaved: string = "minDateLastSaved_example"
+    const minDateLastSavedForUser: string = "minDateLastSavedForUser_example"
+    const maxPremiereDate: string = "maxPremiereDate_example"
+    const hasOverview: boolean = true
+    const hasImdbId: boolean = true
+    const hasTmdbId: boolean = true
+    const hasTvdbId: boolean = true
+    const excludeItemIds: string = "excludeItemIds_example"
     const startIndex: number = 56
     const limit: number = 56
-    const fields: string = "fields_example"
+    const recursive: boolean = true
+    const searchTerm: string = "searchTerm_example"
+    const sortOrder: string = "sortOrder_example"
     const parentId: string = "parentId_example"
+    const fields: string = "fields_example"
+    const excludeItemTypes: string = "excludeItemTypes_example"
+    const includeItemTypes: string = "includeItemTypes_example"
+    const anyProviderIdEquals: string = "anyProviderIdEquals_example"
+    const filters: string = "filters_example"
+    const isFavorite: boolean = true
+    const isMovie: boolean = true
+    const isSeries: boolean = true
+    const isFolder: boolean = true
+    const isNews: boolean = true
+    const isKids: boolean = true
+    const isSports: boolean = true
+    const isNew: boolean = true
+    const isPremiere: boolean = true
+    const isNewOrPremiere: boolean = true
+    const isRepeat: boolean = true
+    const projectToMedia: boolean = true
+    const mediaTypes: string = "mediaTypes_example"
+    const imageTypes: string = "imageTypes_example"
+    const sortBy: string = "sortBy_example"
+    const isPlayed: boolean = true
+    const genres: string = "genres_example"
+    const officialRatings: string = "officialRatings_example"
+    const tags: string = "tags_example"
+    const excludeTags: string = "excludeTags_example"
+    const years: string = "years_example"
     const enableImages: boolean = true
+    const enableUserData: boolean = true
     const imageTypeLimit: number = 56
     const enableImageTypes: string = "enableImageTypes_example"
-    const enableUserData: boolean = true
-    return expect(instance.getShowsUpcoming(userId, startIndex, limit, fields, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData, {})).resolves.toBe(null)
+    const person: string = "person_example"
+    const personIds: string = "personIds_example"
+    const personTypes: string = "personTypes_example"
+    const studios: string = "studios_example"
+    const studioIds: string = "studioIds_example"
+    const artists: string = "artists_example"
+    const artistIds: string = "artistIds_example"
+    const albums: string = "albums_example"
+    const ids: string = "ids_example"
+    const videoTypes: string = "videoTypes_example"
+    const containers: string = "containers_example"
+    const audioCodecs: string = "audioCodecs_example"
+    const audioLayouts: string = "audioLayouts_example"
+    const videoCodecs: string = "videoCodecs_example"
+    const extendedVideoTypes: string = "extendedVideoTypes_example"
+    const subtitleCodecs: string = "subtitleCodecs_example"
+    const path: string = "path_example"
+    const userId: string = "userId_example"
+    const minOfficialRating: string = "minOfficialRating_example"
+    const isLocked: boolean = true
+    const isPlaceHolder: boolean = true
+    const hasOfficialRating: boolean = true
+    const groupItemsIntoCollections: boolean = true
+    const is3D: boolean = true
+    const seriesStatus: string = "seriesStatus_example"
+    const nameStartsWithOrGreater: string = "nameStartsWithOrGreater_example"
+    const artistStartsWithOrGreater: string = "artistStartsWithOrGreater_example"
+    const albumArtistStartsWithOrGreater: string = "albumArtistStartsWithOrGreater_example"
+    const nameStartsWith: string = "nameStartsWith_example"
+    const nameLessThan: string = "nameLessThan_example"
+    return expect(instance.getShowsUpcoming(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, {})).resolves.toBe(null)
   })
 })
 
@@ -5909,17 +6894,32 @@ describe("UserLibraryServiceApi", () => {
   test("getUsersByUseridItemsByIdIntros", () => {
     const userId: string = "userId_example"
     const id: string = "id_example"
-    return expect(instance.getUsersByUseridItemsByIdIntros(userId, id, {})).resolves.toBe(null)
+    const fields: string = "fields_example"
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    return expect(instance.getUsersByUseridItemsByIdIntros(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, {})).resolves.toBe(null)
   })
   test("getUsersByUseridItemsByIdLocaltrailers", () => {
     const userId: string = "userId_example"
     const id: string = "id_example"
-    return expect(instance.getUsersByUseridItemsByIdLocaltrailers(userId, id, {})).resolves.toBe(null)
+    const fields: string = "fields_example"
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    return expect(instance.getUsersByUseridItemsByIdLocaltrailers(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, {})).resolves.toBe(null)
   })
   test("getUsersByUseridItemsByIdSpecialfeatures", () => {
     const userId: string = "userId_example"
     const id: string = "id_example"
-    return expect(instance.getUsersByUseridItemsByIdSpecialfeatures(userId, id, {})).resolves.toBe(null)
+    const fields: string = "fields_example"
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    return expect(instance.getUsersByUseridItemsByIdSpecialfeatures(userId, id, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, {})).resolves.toBe(null)
   })
   test("getUsersByUseridItemsLatest", () => {
     const userId: string = "userId_example"
@@ -5944,7 +6944,28 @@ describe("UserLibraryServiceApi", () => {
   test("getVideosByIdAdditionalparts", () => {
     const id: string = "id_example"
     const userId: string = "userId_example"
-    return expect(instance.getVideosByIdAdditionalparts(id, userId, {})).resolves.toBe(null)
+    const fields: string = "fields_example"
+    const enableImages: boolean = true
+    const imageTypeLimit: number = 56
+    const enableImageTypes: string = "enableImageTypes_example"
+    const enableUserData: boolean = true
+    return expect(instance.getVideosByIdAdditionalparts(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, {})).resolves.toBe(null)
+  })
+  test("postItemsAccess", () => {
+    const body: api.UserLibraryUpdateUserItemAccess = undefined
+    return expect(instance.postItemsAccess(body, {})).resolves.toBe(null)
+  })
+  test("postItemsByIdMakeprivate", () => {
+    const id: string = "id_example"
+    return expect(instance.postItemsByIdMakeprivate(id, {})).resolves.toBe(null)
+  })
+  test("postItemsByIdMakepublic", () => {
+    const id: string = "id_example"
+    return expect(instance.postItemsByIdMakepublic(id, {})).resolves.toBe(null)
+  })
+  test("postItemsSharedLeave", () => {
+    const body: api.UserLibraryLeaveSharedItems = undefined
+    return expect(instance.postItemsSharedLeave(body, {})).resolves.toBe(null)
   })
   test("postUsersByUseridFavoriteitemsById", () => {
     const userId: string = "userId_example"
@@ -5975,6 +6996,21 @@ describe("UserLibraryServiceApi", () => {
   })
 })
 
+describe("UserNotificationsServiceApi", () => {
+  let instance: api.UserNotificationsServiceApi
+  beforeEach(function() {
+    instance = new api.UserNotificationsServiceApi(config)
+  });
+
+  test("getNotificationsServicesDefaults", () => {
+    return expect(instance.getNotificationsServicesDefaults({})).resolves.toBe(null)
+  })
+  test("postNotificationsServicesTest", () => {
+    const body: api.UserNotificationInfo = undefined
+    return expect(instance.postNotificationsServicesTest(body, {})).resolves.toBe(null)
+  })
+})
+
 describe("UserServiceApi", () => {
   let instance: api.UserServiceApi
   beforeEach(function() {
@@ -5994,13 +7030,28 @@ describe("UserServiceApi", () => {
     const id: string = "id_example"
     return expect(instance.getUsersById(id, {})).resolves.toBe(null)
   })
+  test("getUsersByUseridTypedsettingsByKey", () => {
+    const key: string = "key_example"
+    const userId: string = "userId_example"
+    return expect(instance.getUsersByUseridTypedsettingsByKey(key, userId, {})).resolves.toBe(null)
+  })
+  test("getUsersItemaccess", () => {
+    const isHidden: boolean = true
+    const isDisabled: boolean = true
+    const startIndex: number = 56
+    const limit: number = 56
+    const nameStartsWithOrGreater: string = "nameStartsWithOrGreater_example"
+    const sortOrder: string = "sortOrder_example"
+    return expect(instance.getUsersItemaccess(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, {})).resolves.toBe(null)
+  })
   test("getUsersPrefixes", () => {
     const isHidden: boolean = true
     const isDisabled: boolean = true
     const startIndex: number = 56
     const limit: number = 56
     const nameStartsWithOrGreater: string = "nameStartsWithOrGreater_example"
-    return expect(instance.getUsersPrefixes(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, {})).resolves.toBe(null)
+    const sortOrder: string = "sortOrder_example"
+    return expect(instance.getUsersPrefixes(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, {})).resolves.toBe(null)
   })
   test("getUsersPublic", () => {
     return expect(instance.getUsersPublic({})).resolves.toBe(null)
@@ -6011,7 +7062,8 @@ describe("UserServiceApi", () => {
     const startIndex: number = 56
     const limit: number = 56
     const nameStartsWithOrGreater: string = "nameStartsWithOrGreater_example"
-    return expect(instance.getUsersQuery(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, {})).resolves.toBe(null)
+    const sortOrder: string = "sortOrder_example"
+    return expect(instance.getUsersQuery(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, {})).resolves.toBe(null)
   })
   test("postUsersAuthenticatebyname", () => {
     const body: api.AuthenticateUserByName = undefined
@@ -6029,18 +7081,18 @@ describe("UserServiceApi", () => {
     return expect(instance.postUsersByIdAuthenticate(body, id, {})).resolves.toBe(null)
   })
   test("postUsersByIdConfiguration", () => {
-    const body: api.ConfigurationUserConfiguration = undefined
+    const body: api.UserConfiguration = undefined
     const id: string = "id_example"
     return expect(instance.postUsersByIdConfiguration(body, id, {})).resolves.toBe(null)
+  })
+  test("postUsersByIdConfigurationPartial", () => {
+    const body: Object = undefined
+    const id: string = "id_example"
+    return expect(instance.postUsersByIdConfigurationPartial(body, id, {})).resolves.toBe(null)
   })
   test("postUsersByIdDelete", () => {
     const id: string = "id_example"
     return expect(instance.postUsersByIdDelete(id, {})).resolves.toBe(null)
-  })
-  test("postUsersByIdEasypassword", () => {
-    const body: api.UpdateUserEasyPassword = undefined
-    const id: string = "id_example"
-    return expect(instance.postUsersByIdEasypassword(body, id, {})).resolves.toBe(null)
   })
   test("postUsersByIdPassword", () => {
     const body: api.UpdateUserPassword = undefined
@@ -6048,7 +7100,7 @@ describe("UserServiceApi", () => {
     return expect(instance.postUsersByIdPassword(body, id, {})).resolves.toBe(null)
   })
   test("postUsersByIdPolicy", () => {
-    const body: api.UsersUserPolicy = undefined
+    const body: api.UserPolicy = undefined
     const id: string = "id_example"
     return expect(instance.postUsersByIdPolicy(body, id, {})).resolves.toBe(null)
   })
@@ -6056,6 +7108,12 @@ describe("UserServiceApi", () => {
     const id: string = "id_example"
     const trackType: string = "trackType_example"
     return expect(instance.postUsersByIdTrackselectionsByTracktypeDelete(id, trackType, {})).resolves.toBe(null)
+  })
+  test("postUsersByUseridTypedsettingsByKey", () => {
+    const body: Object = undefined
+    const userId: string = "userId_example"
+    const key: string = "key_example"
+    return expect(instance.postUsersByUseridTypedsettingsByKey(body, userId, key, {})).resolves.toBe(null)
   })
   test("postUsersForgotpassword", () => {
     const body: api.ForgotPassword = undefined
@@ -6090,6 +7148,13 @@ describe("VideoHlsServiceApi", () => {
     instance = new api.VideoHlsServiceApi(config)
   });
 
+  test("getAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer", () => {
+    const segmentContainer: string = "segmentContainer_example"
+    const segmentId: string = "segmentId_example"
+    const id: string = "id_example"
+    const playlistId: string = "playlistId_example"
+    return expect(instance.getAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer(segmentContainer, segmentId, id, playlistId, {})).resolves.toBe(null)
+  })
   test("getVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer", () => {
     const segmentContainer: string = "segmentContainer_example"
     const segmentId: string = "segmentId_example"
@@ -6097,7 +7162,16 @@ describe("VideoHlsServiceApi", () => {
     const playlistId: string = "playlistId_example"
     return expect(instance.getVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer(segmentContainer, segmentId, id, playlistId, {})).resolves.toBe(null)
   })
-  test("getVideosByIdLiveM3u8", () => {
+})
+
+describe("VideoServiceApi", () => {
+  let instance: api.VideoServiceApi
+  beforeEach(function() {
+    instance = new api.VideoServiceApi(config)
+  });
+
+  test("getVideosByIdByStreamfilename", () => {
+    const streamFileName: string = "streamFileName_example"
     const id: string = "id_example"
     const container: string = "container_example"
     const deviceProfileId: string = "deviceProfileId_example"
@@ -6109,10 +7183,6 @@ describe("VideoHlsServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -6121,22 +7191,13 @@ describe("VideoHlsServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.getVideosByIdLiveM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.getVideosByIdByStreamfilename(streamFileName, id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
-})
-
-describe("VideoServiceApi", () => {
-  let instance: api.VideoServiceApi
-  beforeEach(function() {
-    instance = new api.VideoServiceApi(config)
-  });
-
   test("getVideosByIdStream", () => {
     const id: string = "id_example"
     const container: string = "container_example"
@@ -6149,10 +7210,6 @@ describe("VideoServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -6161,13 +7218,12 @@ describe("VideoServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.getVideosByIdStream(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.getVideosByIdStream(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("getVideosByIdStreamByContainer", () => {
     const id: string = "id_example"
@@ -6181,10 +7237,6 @@ describe("VideoServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -6193,13 +7245,40 @@ describe("VideoServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.getVideosByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.getVideosByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+  })
+  test("headVideosByIdByStreamfilename", () => {
+    const streamFileName: string = "streamFileName_example"
+    const id: string = "id_example"
+    const container: string = "container_example"
+    const deviceProfileId: string = "deviceProfileId_example"
+    const deviceId: string = "deviceId_example"
+    const audioCodec: string = "audioCodec_example"
+    const enableAutoStreamCopy: boolean = true
+    const audioSampleRate: number = 56
+    const audioBitRate: number = 56
+    const audioChannels: number = 56
+    const maxAudioChannels: number = 56
+    const _static: boolean = true
+    const copyTimestamps: boolean = true
+    const startTimeTicks: number = 789
+    const width: number = 56
+    const height: number = 56
+    const maxWidth: number = 56
+    const maxHeight: number = 56
+    const videoBitRate: number = 56
+    const subtitleStreamIndex: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
+    const maxVideoBitDepth: number = 56
+    const videoCodec: string = "videoCodec_example"
+    const audioStreamIndex: number = 56
+    const videoStreamIndex: number = 56
+    return expect(instance.headVideosByIdByStreamfilename(streamFileName, id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("headVideosByIdStream", () => {
     const id: string = "id_example"
@@ -6213,10 +7292,6 @@ describe("VideoServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -6225,13 +7300,12 @@ describe("VideoServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.headVideosByIdStream(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.headVideosByIdStream(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("headVideosByIdStreamByContainer", () => {
     const id: string = "id_example"
@@ -6245,10 +7319,6 @@ describe("VideoServiceApi", () => {
     const audioChannels: number = 56
     const maxAudioChannels: number = 56
     const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
     const copyTimestamps: boolean = true
     const startTimeTicks: number = 789
     const width: number = 56
@@ -6257,13 +7327,12 @@ describe("VideoServiceApi", () => {
     const maxHeight: number = 56
     const videoBitRate: number = 56
     const subtitleStreamIndex: number = 56
-    const subtitleMethod: DlnaSubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
     const maxVideoBitDepth: number = 56
     const videoCodec: string = "videoCodec_example"
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
-    return expect(instance.headVideosByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+    return expect(instance.headVideosByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
 })
 
@@ -6284,6 +7353,26 @@ describe("VideosServiceApi", () => {
   test("postVideosMergeversions", () => {
     const ids: string = "ids_example"
     return expect(instance.postVideosMergeversions(ids, {})).resolves.toBe(null)
+  })
+})
+
+describe("WebAppServiceApi", () => {
+  let instance: api.WebAppServiceApi
+  beforeEach(function() {
+    instance = new api.WebAppServiceApi(config)
+  });
+
+  test("getWebConfigurationpage", () => {
+    return expect(instance.getWebConfigurationpage({})).resolves.toBe(null)
+  })
+  test("getWebConfigurationpages", () => {
+    return expect(instance.getWebConfigurationpages({})).resolves.toBe(null)
+  })
+  test("getWebStrings", () => {
+    return expect(instance.getWebStrings({})).resolves.toBe(null)
+  })
+  test("getWebStringset", () => {
+    return expect(instance.getWebStringset({})).resolves.toBe(null)
   })
 })
 

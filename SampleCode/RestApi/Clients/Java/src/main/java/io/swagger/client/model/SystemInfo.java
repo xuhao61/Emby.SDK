@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -12,20 +12,21 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.UpdatesInstallationInfo;
-import io.swagger.client.model.UpdatesPackageVersionClass;
+import io.swagger.client.model.InstallationInfo;
+import io.swagger.client.model.PackageVersionClass;
+import io.swagger.client.model.WakeOnLanInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * SystemInfo
+ * Class SystemInfo  
  */
-
+@Schema(description = "Class SystemInfo  ")
 
 public class SystemInfo {
   @SerializedName("SystemUpdateLevel")
-  private UpdatesPackageVersionClass systemUpdateLevel = null;
+  private PackageVersionClass systemUpdateLevel = null;
 
   @SerializedName("OperatingSystemDisplayName")
   private String operatingSystemDisplayName = null;
@@ -38,6 +39,9 @@ public class SystemInfo {
 
   @SerializedName("IsShuttingDown")
   private Boolean isShuttingDown = null;
+
+  @SerializedName("HasImageEnhancers")
+  private Boolean hasImageEnhancers = null;
 
   @SerializedName("OperatingSystem")
   private String operatingSystem = null;
@@ -55,7 +59,7 @@ public class SystemInfo {
   private Integer webSocketPortNumber = null;
 
   @SerializedName("CompletedInstallations")
-  private List<UpdatesInstallationInfo> completedInstallations = null;
+  private List<InstallationInfo> completedInstallations = null;
 
   @SerializedName("CanSelfRestart")
   private Boolean canSelfRestart = null;
@@ -102,6 +106,9 @@ public class SystemInfo {
   @SerializedName("HardwareAccelerationRequiresPremiere")
   private Boolean hardwareAccelerationRequiresPremiere = null;
 
+  @SerializedName("WakeOnLanInfo")
+  private List<WakeOnLanInfo> wakeOnLanInfo = null;
+
   @SerializedName("LocalAddress")
   private String localAddress = null;
 
@@ -123,7 +130,7 @@ public class SystemInfo {
   @SerializedName("Id")
   private String id = null;
 
-  public SystemInfo systemUpdateLevel(UpdatesPackageVersionClass systemUpdateLevel) {
+  public SystemInfo systemUpdateLevel(PackageVersionClass systemUpdateLevel) {
     this.systemUpdateLevel = systemUpdateLevel;
     return this;
   }
@@ -133,11 +140,11 @@ public class SystemInfo {
    * @return systemUpdateLevel
   **/
   @Schema(description = "")
-  public UpdatesPackageVersionClass getSystemUpdateLevel() {
+  public PackageVersionClass getSystemUpdateLevel() {
     return systemUpdateLevel;
   }
 
-  public void setSystemUpdateLevel(UpdatesPackageVersionClass systemUpdateLevel) {
+  public void setSystemUpdateLevel(PackageVersionClass systemUpdateLevel) {
     this.systemUpdateLevel = systemUpdateLevel;
   }
 
@@ -147,10 +154,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get operatingSystemDisplayName
+   * The display name of the operating system.
    * @return operatingSystemDisplayName
   **/
-  @Schema(description = "")
+  @Schema(description = "The display name of the operating system.")
   public String getOperatingSystemDisplayName() {
     return operatingSystemDisplayName;
   }
@@ -183,10 +190,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get hasPendingRestart
+   * A value indicating whether this instance has pending restart.
    * @return hasPendingRestart
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance has pending restart.")
   public Boolean isHasPendingRestart() {
     return hasPendingRestart;
   }
@@ -213,16 +220,34 @@ public class SystemInfo {
     this.isShuttingDown = isShuttingDown;
   }
 
+  public SystemInfo hasImageEnhancers(Boolean hasImageEnhancers) {
+    this.hasImageEnhancers = hasImageEnhancers;
+    return this;
+  }
+
+   /**
+   * Get hasImageEnhancers
+   * @return hasImageEnhancers
+  **/
+  @Schema(description = "")
+  public Boolean isHasImageEnhancers() {
+    return hasImageEnhancers;
+  }
+
+  public void setHasImageEnhancers(Boolean hasImageEnhancers) {
+    this.hasImageEnhancers = hasImageEnhancers;
+  }
+
   public SystemInfo operatingSystem(String operatingSystem) {
     this.operatingSystem = operatingSystem;
     return this;
   }
 
    /**
-   * Get operatingSystem
+   * The operating sytem.
    * @return operatingSystem
   **/
-  @Schema(description = "")
+  @Schema(description = "The operating sytem.")
   public String getOperatingSystem() {
     return operatingSystem;
   }
@@ -237,10 +262,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get supportsLibraryMonitor
+   * A value indicating whether \\[supports library monitor\\].
    * @return supportsLibraryMonitor
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[supports library monitor\\].")
   public Boolean isSupportsLibraryMonitor() {
     return supportsLibraryMonitor;
   }
@@ -291,10 +316,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get webSocketPortNumber
+   * The web socket port number.
    * @return webSocketPortNumber
   **/
-  @Schema(description = "")
+  @Schema(description = "The web socket port number.")
   public Integer getWebSocketPortNumber() {
     return webSocketPortNumber;
   }
@@ -303,29 +328,29 @@ public class SystemInfo {
     this.webSocketPortNumber = webSocketPortNumber;
   }
 
-  public SystemInfo completedInstallations(List<UpdatesInstallationInfo> completedInstallations) {
+  public SystemInfo completedInstallations(List<InstallationInfo> completedInstallations) {
     this.completedInstallations = completedInstallations;
     return this;
   }
 
-  public SystemInfo addCompletedInstallationsItem(UpdatesInstallationInfo completedInstallationsItem) {
+  public SystemInfo addCompletedInstallationsItem(InstallationInfo completedInstallationsItem) {
     if (this.completedInstallations == null) {
-      this.completedInstallations = new ArrayList<UpdatesInstallationInfo>();
+      this.completedInstallations = new ArrayList<InstallationInfo>();
     }
     this.completedInstallations.add(completedInstallationsItem);
     return this;
   }
 
    /**
-   * Get completedInstallations
+   * The completed installations.
    * @return completedInstallations
   **/
-  @Schema(description = "")
-  public List<UpdatesInstallationInfo> getCompletedInstallations() {
+  @Schema(description = "The completed installations.")
+  public List<InstallationInfo> getCompletedInstallations() {
     return completedInstallations;
   }
 
-  public void setCompletedInstallations(List<UpdatesInstallationInfo> completedInstallations) {
+  public void setCompletedInstallations(List<InstallationInfo> completedInstallations) {
     this.completedInstallations = completedInstallations;
   }
 
@@ -335,10 +360,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get canSelfRestart
+   * A value indicating whether this instance can self restart.
    * @return canSelfRestart
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance can self restart.")
   public Boolean isCanSelfRestart() {
     return canSelfRestart;
   }
@@ -353,10 +378,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get canSelfUpdate
+   * A value indicating whether this instance can self update.
    * @return canSelfUpdate
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance can self update.")
   public Boolean isCanSelfUpdate() {
     return canSelfUpdate;
   }
@@ -389,10 +414,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get programDataPath
+   * The program data path.
    * @return programDataPath
   **/
-  @Schema(description = "")
+  @Schema(description = "The program data path.")
   public String getProgramDataPath() {
     return programDataPath;
   }
@@ -407,10 +432,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get itemsByNamePath
+   * The items by name path.
    * @return itemsByNamePath
   **/
-  @Schema(description = "")
+  @Schema(description = "The items by name path.")
   public String getItemsByNamePath() {
     return itemsByNamePath;
   }
@@ -425,10 +450,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get cachePath
+   * The cache path.
    * @return cachePath
   **/
-  @Schema(description = "")
+  @Schema(description = "The cache path.")
   public String getCachePath() {
     return cachePath;
   }
@@ -443,10 +468,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get logPath
+   * The log path.
    * @return logPath
   **/
-  @Schema(description = "")
+  @Schema(description = "The log path.")
   public String getLogPath() {
     return logPath;
   }
@@ -461,10 +486,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get internalMetadataPath
+   * The internal metadata path.
    * @return internalMetadataPath
   **/
-  @Schema(description = "")
+  @Schema(description = "The internal metadata path.")
   public String getInternalMetadataPath() {
     return internalMetadataPath;
   }
@@ -479,10 +504,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get transcodingTempPath
+   * The transcoding temporary path.
    * @return transcodingTempPath
   **/
-  @Schema(description = "")
+  @Schema(description = "The transcoding temporary path.")
   public String getTranscodingTempPath() {
     return transcodingTempPath;
   }
@@ -497,10 +522,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get httpServerPortNumber
+   * The HTTP server port number.
    * @return httpServerPortNumber
   **/
-  @Schema(description = "")
+  @Schema(description = "The HTTP server port number.")
   public Integer getHttpServerPortNumber() {
     return httpServerPortNumber;
   }
@@ -515,10 +540,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get supportsHttps
+   * A value indicating whether \\[enable HTTPS\\].
    * @return supportsHttps
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[enable HTTPS\\].")
   public Boolean isSupportsHttps() {
     return supportsHttps;
   }
@@ -533,10 +558,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get httpsPortNumber
+   * The HTTPS server port number.
    * @return httpsPortNumber
   **/
-  @Schema(description = "")
+  @Schema(description = "The HTTPS server port number.")
   public Integer getHttpsPortNumber() {
     return httpsPortNumber;
   }
@@ -551,10 +576,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get hasUpdateAvailable
+   * A value indicating whether this instance has update available.
    * @return hasUpdateAvailable
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance has update available.")
   public Boolean isHasUpdateAvailable() {
     return hasUpdateAvailable;
   }
@@ -569,10 +594,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get supportsAutoRunAtStartup
+   * A value indicating whether \\[supports automatic run at startup\\].
    * @return supportsAutoRunAtStartup
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[supports automatic run at startup\\].")
   public Boolean isSupportsAutoRunAtStartup() {
     return supportsAutoRunAtStartup;
   }
@@ -599,16 +624,42 @@ public class SystemInfo {
     this.hardwareAccelerationRequiresPremiere = hardwareAccelerationRequiresPremiere;
   }
 
+  public SystemInfo wakeOnLanInfo(List<WakeOnLanInfo> wakeOnLanInfo) {
+    this.wakeOnLanInfo = wakeOnLanInfo;
+    return this;
+  }
+
+  public SystemInfo addWakeOnLanInfoItem(WakeOnLanInfo wakeOnLanInfoItem) {
+    if (this.wakeOnLanInfo == null) {
+      this.wakeOnLanInfo = new ArrayList<WakeOnLanInfo>();
+    }
+    this.wakeOnLanInfo.add(wakeOnLanInfoItem);
+    return this;
+  }
+
+   /**
+   * Get wakeOnLanInfo
+   * @return wakeOnLanInfo
+  **/
+  @Schema(description = "")
+  public List<WakeOnLanInfo> getWakeOnLanInfo() {
+    return wakeOnLanInfo;
+  }
+
+  public void setWakeOnLanInfo(List<WakeOnLanInfo> wakeOnLanInfo) {
+    this.wakeOnLanInfo = wakeOnLanInfo;
+  }
+
   public SystemInfo localAddress(String localAddress) {
     this.localAddress = localAddress;
     return this;
   }
 
    /**
-   * Get localAddress
+   * The local address.
    * @return localAddress
   **/
-  @Schema(description = "")
+  @Schema(description = "The local address.")
   public String getLocalAddress() {
     return localAddress;
   }
@@ -649,10 +700,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get wanAddress
+   * The wan address.
    * @return wanAddress
   **/
-  @Schema(description = "")
+  @Schema(description = "The wan address.")
   public String getWanAddress() {
     return wanAddress;
   }
@@ -693,10 +744,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get serverName
+   * The name of the server.
    * @return serverName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the server.")
   public String getServerName() {
     return serverName;
   }
@@ -711,10 +762,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get version
+   * The version.
    * @return version
   **/
-  @Schema(description = "")
+  @Schema(description = "The version.")
   public String getVersion() {
     return version;
   }
@@ -729,10 +780,10 @@ public class SystemInfo {
   }
 
    /**
-   * Get id
+   * The id.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The id.")
   public String getId() {
     return id;
   }
@@ -756,6 +807,7 @@ public class SystemInfo {
         Objects.equals(this.packageName, systemInfo.packageName) &&
         Objects.equals(this.hasPendingRestart, systemInfo.hasPendingRestart) &&
         Objects.equals(this.isShuttingDown, systemInfo.isShuttingDown) &&
+        Objects.equals(this.hasImageEnhancers, systemInfo.hasImageEnhancers) &&
         Objects.equals(this.operatingSystem, systemInfo.operatingSystem) &&
         Objects.equals(this.supportsLibraryMonitor, systemInfo.supportsLibraryMonitor) &&
         Objects.equals(this.supportsLocalPortConfiguration, systemInfo.supportsLocalPortConfiguration) &&
@@ -777,6 +829,7 @@ public class SystemInfo {
         Objects.equals(this.hasUpdateAvailable, systemInfo.hasUpdateAvailable) &&
         Objects.equals(this.supportsAutoRunAtStartup, systemInfo.supportsAutoRunAtStartup) &&
         Objects.equals(this.hardwareAccelerationRequiresPremiere, systemInfo.hardwareAccelerationRequiresPremiere) &&
+        Objects.equals(this.wakeOnLanInfo, systemInfo.wakeOnLanInfo) &&
         Objects.equals(this.localAddress, systemInfo.localAddress) &&
         Objects.equals(this.localAddresses, systemInfo.localAddresses) &&
         Objects.equals(this.wanAddress, systemInfo.wanAddress) &&
@@ -788,7 +841,7 @@ public class SystemInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(systemUpdateLevel, operatingSystemDisplayName, packageName, hasPendingRestart, isShuttingDown, operatingSystem, supportsLibraryMonitor, supportsLocalPortConfiguration, supportsWakeServer, webSocketPortNumber, completedInstallations, canSelfRestart, canSelfUpdate, canLaunchWebBrowser, programDataPath, itemsByNamePath, cachePath, logPath, internalMetadataPath, transcodingTempPath, httpServerPortNumber, supportsHttps, httpsPortNumber, hasUpdateAvailable, supportsAutoRunAtStartup, hardwareAccelerationRequiresPremiere, localAddress, localAddresses, wanAddress, remoteAddresses, serverName, version, id);
+    return Objects.hash(systemUpdateLevel, operatingSystemDisplayName, packageName, hasPendingRestart, isShuttingDown, hasImageEnhancers, operatingSystem, supportsLibraryMonitor, supportsLocalPortConfiguration, supportsWakeServer, webSocketPortNumber, completedInstallations, canSelfRestart, canSelfUpdate, canLaunchWebBrowser, programDataPath, itemsByNamePath, cachePath, logPath, internalMetadataPath, transcodingTempPath, httpServerPortNumber, supportsHttps, httpsPortNumber, hasUpdateAvailable, supportsAutoRunAtStartup, hardwareAccelerationRequiresPremiere, wakeOnLanInfo, localAddress, localAddresses, wanAddress, remoteAddresses, serverName, version, id);
   }
 
 
@@ -802,6 +855,7 @@ public class SystemInfo {
     sb.append("    packageName: ").append(toIndentedString(packageName)).append("\n");
     sb.append("    hasPendingRestart: ").append(toIndentedString(hasPendingRestart)).append("\n");
     sb.append("    isShuttingDown: ").append(toIndentedString(isShuttingDown)).append("\n");
+    sb.append("    hasImageEnhancers: ").append(toIndentedString(hasImageEnhancers)).append("\n");
     sb.append("    operatingSystem: ").append(toIndentedString(operatingSystem)).append("\n");
     sb.append("    supportsLibraryMonitor: ").append(toIndentedString(supportsLibraryMonitor)).append("\n");
     sb.append("    supportsLocalPortConfiguration: ").append(toIndentedString(supportsLocalPortConfiguration)).append("\n");
@@ -823,6 +877,7 @@ public class SystemInfo {
     sb.append("    hasUpdateAvailable: ").append(toIndentedString(hasUpdateAvailable)).append("\n");
     sb.append("    supportsAutoRunAtStartup: ").append(toIndentedString(supportsAutoRunAtStartup)).append("\n");
     sb.append("    hardwareAccelerationRequiresPremiere: ").append(toIndentedString(hardwareAccelerationRequiresPremiere)).append("\n");
+    sb.append("    wakeOnLanInfo: ").append(toIndentedString(wakeOnLanInfo)).append("\n");
     sb.append("    localAddress: ").append(toIndentedString(localAddress)).append("\n");
     sb.append("    localAddresses: ").append(toIndentedString(localAddresses)).append("\n");
     sb.append("    wanAddress: ").append(toIndentedString(wanAddress)).append("\n");
